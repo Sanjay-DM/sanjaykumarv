@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Case Study: Real Estate Meta Ads — From Zero Social Presence to 130+ WhatsApp Leads | Sanjay Kumar V</title>
+<meta name="description" content="How Sanjay Kumar V built a real estate client's social presence from scratch, then ran Meta Ads campaigns that generated 130+ WhatsApp leads and 23K+ reach."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Bricolage+Grotesque:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#ffffff;--bg2:#f5f3ff;--bg3:#ede9fe;--card:#faf9ff;
+  --border:rgba(109,40,217,0.12);--border2:rgba(109,40,217,0.25);
+  --text:#0f0a1e;--muted:#5b5470;--muted2:#9990b0;--accent:#7c3aed;
+  --accent-light:#ede9fe;--accent-mid:#a78bfa;
+  --blue:#3b82f6;--orange:#d97706;--green:#059669;
+  --font-head:'Bricolage Grotesque',sans-serif;--font-body:'Inter',sans-serif;
+  --radius:14px;--radius-sm:8px;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:15px;line-height:1.75;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--bg2)}
+::-webkit-scrollbar-thumb{background:var(--accent-mid);border-radius:4px}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 3rem;height:64px;background:rgba(255,255,255,0.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:var(--font-head);font-size:0.95rem;font-weight:700;display:flex;align-items:center;gap:0.5rem;color:var(--muted)}
+.nav-logo strong{color:var(--text)}
+.nav-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+.nav-back{display:flex;align-items:center;gap:0.5rem;font-size:0.82rem;color:var(--muted);border:1px solid var(--border2);border-radius:40px;padding:0.45rem 1rem;transition:all 0.2s}
+.nav-back:hover{color:var(--text);border-color:var(--text)}
+
+/* HERO */
+.hero{padding:120px 3rem 5rem;max-width:900px;margin:0 auto}
+.breadcrumb{display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;color:var(--muted2);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:2rem}
+.breadcrumb span{color:var(--muted)}
+.cs-tag{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(124,58,237,0.08);border:1px solid rgba(124,58,237,0.2);color:var(--accent);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.35rem 0.9rem;border-radius:40px;margin-bottom:1.5rem}
+h1{font-family:var(--font-head);font-size:clamp(2rem,4.5vw,3.8rem);font-weight:800;line-height:1.05;letter-spacing:-0.02em;margin-bottom:1.5rem}
+h1 em{font-style:normal;color:var(--accent)}
+.hero-meta{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;color:var(--muted);font-size:0.82rem;margin-bottom:3rem;padding-bottom:3rem;border-bottom:1px solid var(--border)}
+.meta-dot{width:4px;height:4px;border-radius:50%;background:var(--muted2)}
+
+/* STATS */
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:5rem}
+.stat-card{background:var(--card);padding:1.75rem 1.5rem;text-align:center}
+.stat-num{font-family:var(--font-head);font-size:2.2rem;font-weight:800;line-height:1;margin-bottom:0.4rem}
+.stat-num.green{color:var(--green)}
+.stat-num.blue{color:var(--blue)}
+.stat-num.orange{color:var(--orange)}
+.stat-num.accent{color:var(--accent)}
+.stat-label{font-size:0.74rem;color:var(--muted);letter-spacing:0.04em;line-height:1.4}
+
+/* BODY */
+.body-content{max-width:900px;margin:0 auto;padding:0 3rem 6rem}
+.section-block{margin-bottom:4.5rem}
+.step-label{display:flex;align-items:center;gap:0.75rem;font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem}
+.step-label::before{content:'';width:20px;height:1px;background:var(--accent)}
+h2{font-family:var(--font-head);font-size:1.65rem;font-weight:700;letter-spacing:-0.02em;line-height:1.2;margin-bottom:1rem;color:var(--text)}
+h3{font-family:var(--font-head);font-size:1.05rem;font-weight:600;color:var(--text);margin:2rem 0 0.75rem}
+p{color:var(--muted);font-size:0.93rem;line-height:1.9;margin-bottom:1rem}
+p strong{color:var(--text);font-weight:500}
+
+/* PROBLEM BOX */
+.problem-box{background:rgba(220,38,38,0.04);border:1px solid rgba(220,38,38,0.15);border-radius:var(--radius);padding:2rem;margin:1.5rem 0}
+.problem-box-title{font-family:var(--font-head);font-size:0.95rem;font-weight:700;color:var(--red);margin-bottom:1rem;display:flex;align-items:center;gap:0.5rem}
+.prob-item{display:flex;align-items:flex-start;gap:0.75rem;margin-bottom:0.6rem;font-size:0.88rem;color:var(--muted)}
+.prob-item::before{content:'✕';color:var(--red);font-weight:700;font-size:0.75rem;margin-top:0.2rem;flex-shrink:0}
+
+/* PHASE CARDS */
+.phases{display:flex;flex-direction:column;gap:0;margin:2rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.phase-card{background:var(--card);padding:2rem 2rem;border-bottom:1px solid var(--border);transition:background 0.3s}
+.phase-card:last-child{border-bottom:none}
+.phase-card:hover{background:var(--bg3)}
+.phase-header{display:flex;align-items:center;gap:1rem;margin-bottom:1rem}
+.phase-num{font-family:var(--font-head);font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);background:rgba(124,58,237,0.08);border:1px solid rgba(124,58,237,0.2);border-radius:40px;padding:0.25rem 0.75rem;white-space:nowrap}
+.phase-name{font-family:var(--font-head);font-size:1.1rem;font-weight:700;color:var(--text)}
+.phase-desc{font-size:0.88rem;color:var(--muted);line-height:1.85}
+.phase-bullets{margin-top:0.75rem;display:flex;flex-direction:column;gap:0.4rem}
+.phase-bullet{display:flex;align-items:flex-start;gap:0.65rem;font-size:0.85rem;color:var(--muted)}
+.phase-bullet::before{content:'→';color:var(--accent);font-size:0.8rem;margin-top:0.1rem;flex-shrink:0}
+
+/* FUNNEL VISUAL */
+.funnel-wrap{margin:2rem 0;display:flex;flex-direction:column;gap:2px}
+.funnel-stage{border-radius:var(--radius-sm);padding:1.25rem 1.75rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.funnel-stage.f1{background:rgba(59,130,246,0.06);border:1px solid rgba(59,130,246,0.18)}
+.funnel-stage.f2{background:rgba(124,58,237,0.05);border:1px solid rgba(124,58,237,0.15)}
+.funnel-stage.f3{background:rgba(5,150,105,0.05);border:1px solid rgba(5,150,105,0.18)}
+.funnel-left{display:flex;align-items:center;gap:1rem}
+.funnel-icon{font-size:1.4rem}
+.funnel-title{font-family:var(--font-head);font-size:0.95rem;font-weight:600;color:var(--text)}
+.funnel-desc{font-size:0.8rem;color:var(--muted);margin-top:0.2rem}
+.funnel-metric{text-align:right}
+.funnel-metric-num{font-family:var(--font-head);font-size:1.4rem;font-weight:800}
+.funnel-metric-num.blue{color:var(--blue)}
+.funnel-metric-num.accent{color:var(--accent)}
+.funnel-metric-num.green{color:var(--green)}
+.funnel-metric-label{font-size:0.7rem;color:var(--muted);margin-top:0.15rem}
+.funnel-arrow{text-align:center;font-size:1.2rem;color:var(--muted2);padding:0.2rem 0}
+
+/* CAMPAIGN TABLE */
+.campaign-table-wrap{margin:2rem 0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.ct-header{display:grid;grid-template-columns:2.5fr 1fr 1fr 1fr 1fr;gap:0;background:var(--bg3);padding:0.9rem 1.25rem;border-bottom:1px solid var(--border)}
+.ct-header span{font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted2);font-weight:500}
+.ct-row{display:grid;grid-template-columns:2.5fr 1fr 1fr 1fr 1fr;gap:0;padding:1rem 1.25rem;border-bottom:1px solid var(--border);transition:background 0.2s;align-items:center}
+.ct-row:last-child{border-bottom:none}
+.ct-row:hover{background:var(--bg3)}
+.ct-name{font-size:0.85rem;color:var(--text);font-weight:400}
+.ct-name small{display:block;font-size:0.72rem;color:var(--muted);margin-top:0.15rem}
+.ct-val{font-size:0.85rem;color:var(--muted)}
+.ct-badge{display:inline-block;font-size:0.72rem;padding:0.2rem 0.6rem;border-radius:40px;font-weight:500}
+.badge-awareness{background:rgba(59,130,246,0.08);color:var(--blue);border:1px solid rgba(59,130,246,0.2)}
+.badge-traffic{background:rgba(217,119,6,0.08);color:var(--orange);border:1px solid rgba(217,119,6,0.2)}
+.badge-engagement{background:rgba(124,58,237,0.08);color:var(--accent);border:1px solid rgba(124,58,237,0.2)}
+.badge-lead{background:rgba(5,150,105,0.08);color:var(--green);border:1px solid rgba(5,150,105,0.2)}
+.ct-total-row{background:var(--bg2);display:grid;grid-template-columns:2.5fr 1fr 1fr 1fr 1fr;gap:0;padding:1rem 1.25rem;border-top:1px solid var(--border2)}
+.ct-total-row span{font-size:0.82rem;font-weight:600;color:var(--text)}
+.ct-total-row span:first-child{color:var(--muted);font-weight:400}
+
+/* SCREENSHOT */
+.ss-wrap{margin:2.5rem 0}
+.ss-label{font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;display:flex;align-items:center;gap:0.75rem}
+.ss-label::before{content:'';width:20px;height:1px;background:var(--accent)}
+.ss-card{border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);background:var(--bg3)}
+.ss-card img{width:100%;display:block}
+.ss-caption{padding:0.9rem 1.25rem;font-size:0.78rem;color:var(--muted2);border-top:1px solid var(--border);display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap}
+.ss-caption strong{color:var(--muted)}
+
+/* METRICS GRID */
+.metrics-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2rem 0}
+.metric-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:1.5rem;transition:border-color 0.2s}
+.metric-card:hover{border-color:var(--border2)}
+.metric-icon{font-size:1.25rem;margin-bottom:0.75rem}
+.metric-num{font-family:var(--font-head);font-size:1.8rem;font-weight:800;line-height:1;margin-bottom:0.3rem}
+.metric-num.accent{color:var(--accent)}
+.metric-num.blue{color:var(--blue)}
+.metric-num.orange{color:var(--orange)}
+.metric-num.green{color:var(--green)}
+.metric-name{font-size:0.82rem;color:var(--text);font-weight:500;margin-bottom:0.25rem}
+.metric-desc{font-size:0.75rem;color:var(--muted)}
+
+/* QUOTE */
+.quote-block{background:var(--bg2);border-left:3px solid var(--accent);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:1.5rem 2rem;margin:2rem 0}
+.quote-block p{color:var(--text);font-size:0.95rem;font-style:italic;margin:0;line-height:1.8}
+
+/* LESSONS */
+.lessons-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem}
+.lesson-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:1.5rem;transition:border-color 0.2s}
+.lesson-card:hover{border-color:var(--border2)}
+.lesson-num{font-family:var(--font-head);font-size:0.68rem;color:var(--accent);letter-spacing:0.1em;margin-bottom:0.5rem}
+.lesson-title{font-size:0.9rem;font-weight:600;color:var(--text);margin-bottom:0.4rem}
+.lesson-desc{font-size:0.82rem;color:var(--muted);line-height:1.7}
+
+/* AUTHOR CTA */
+.author-cta{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:2.5rem;margin-top:5rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.author-info h3{font-family:var(--font-head);font-size:1.1rem;font-weight:700;margin-bottom:0.4rem}
+.author-info p{font-size:0.85rem;color:var(--muted);margin:0}
+.cta-btn{background:var(--accent);color:#fff;font-weight:600;font-size:0.85rem;padding:0.75rem 1.75rem;border-radius:40px;white-space:nowrap;transition:opacity 0.2s,box-shadow 0.2s;box-shadow:0 4px 20px rgba(124,58,237,0.25)}
+.cta-btn:hover{opacity:0.85}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity 0.65s ease,transform 0.65s ease}
+.reveal.show{opacity:1;transform:none}
+
+@media(max-width:800px){
+  nav{padding:0 1.5rem}
+  .hero,.body-content{padding-left:1.5rem;padding-right:1.5rem}
+  .stats-row,.metrics-grid,.lessons-grid,.ct-header,.ct-row,.ct-total-row{grid-template-columns:1fr}
+  .ct-header,.ct-row,.ct-total-row{display:flex;flex-wrap:wrap;gap:0.35rem}
+  h1{font-size:2rem}
+  .funnel-stage{flex-direction:column;align-items:flex-start}
+  .author-cta{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <div class="nav-dot"></div>
+    <span>Sanjay Kumar V · <strong>Case Study</strong></span>
+  </div>
+  <a href="sanjay-portfolio.html" class="nav-back">← Back to Portfolio</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="breadcrumb">
+    <span>Sanjay Kumar V</span>
+    <span>›</span>
+    <span>Case Studies</span>
+    <span>›</span>
+    Meta Ads · Real Estate
+  </div>
+  <div class="cs-tag">📍 Meta Ads Case Study · Real Estate · Lead Generation</div>
+  <h1>From <em>Zero Social Presence</em> to 130+ WhatsApp Leads — A Real Estate Meta Ads Playbook</h1>
+  <div class="hero-meta">
+    <div>📅 Feb – Mar 2026</div>
+    <div class="meta-dot"></div>
+    <div>🏢 Real Estate Client</div>
+    <div class="meta-dot"></div>
+    <div>📱 Meta Ads · Facebook · Instagram</div>
+    <div class="meta-dot"></div>
+    <div>👤 Sanjay Kumar V</div>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-card">
+      <div class="stat-num green">130+</div>
+      <div class="stat-label">WhatsApp Conversations Generated</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num blue">23K+</div>
+      <div class="stat-label">Website Reach Achieved</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num orange">₹11,997</div>
+      <div class="stat-label">Total Ad Spend (Mar 2026)</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num accent">575K+</div>
+      <div class="stat-label">Total Impressions Delivered</div>
+    </div>
+  </div>
+</div>
+
+<!-- BODY -->
+<div class="body-content">
+
+  <!-- THE CHALLENGE -->
+  <div class="section-block reveal">
+    <div class="step-label">The Challenge</div>
+    <h2>A real estate client with no social presence — and no audience to advertise to</h2>
+    <p>
+      When this real estate client first came to us, they had one core problem: <strong>they had no
+      social media presence whatsoever</strong>. No Facebook page. No Instagram. No followers.
+      No content history. Nothing.
+    </p>
+    <p>
+      This created a fundamental issue for Meta Ads. Meta's algorithm relies on
+      <strong>audience signals</strong> — past engagement, page followers, pixel data, and content
+      interaction — to efficiently deliver ads to the right people. Without any of this,
+      running paid campaigns would mean paying top dollar for cold, untargeted delivery.
+      The algorithm would have no idea who to show the ads to.
+    </p>
+
+    <div class="problem-box">
+      <div class="problem-box-title">⚠ Starting Conditions</div>
+      <div class="prob-item">No Facebook or Instagram pages existed — had to be created from scratch</div>
+      <div class="prob-item">Zero followers, zero engagement history, zero pixel data</div>
+      <div class="prob-item">Meta's algorithm had no audience signals to work with</div>
+      <div class="prob-item">Running ads immediately would mean high CPM and poor targeting efficiency</div>
+      <div class="prob-item">Real estate is a high-intent category — reaching the wrong audience wastes budget fast</div>
+    </div>
+
+    <p>
+      The brief was clear: <strong>generate WhatsApp conversations from serious property enquiries</strong>.
+      But before we could run a single rupee of ads, we had to build the foundation.
+    </p>
+  </div>
+
+  <!-- THE STRATEGY -->
+  <div class="section-block reveal">
+    <div class="step-label">The Strategy</div>
+    <h2>A 3-phase funnel: Build → Warm → Convert</h2>
+    <p>
+      Rather than jumping straight into lead generation ads — which would have been expensive
+      and inefficient — we designed a <strong>structured 3-phase funnel</strong>. Each phase served
+      a specific purpose and fed directly into the next.
+    </p>
+
+    <div class="funnel-wrap">
+      <div class="funnel-stage f1">
+        <div class="funnel-left">
+          <div class="funnel-icon">🏗️</div>
+          <div>
+            <div class="funnel-title">Phase 1 — Foundation: Build Social Pages & Consistency</div>
+            <div class="funnel-desc">Create pages, post consistently, train the algorithm with organic content signals</div>
+          </div>
+        </div>
+        <div class="funnel-metric">
+          <div class="funnel-metric-num blue">Pre-Ads</div>
+          <div class="funnel-metric-label">Organic Phase</div>
+        </div>
+      </div>
+      <div class="funnel-arrow">↓</div>
+      <div class="funnel-stage f2">
+        <div class="funnel-left">
+          <div class="funnel-icon">📢</div>
+          <div>
+            <div class="funnel-title">Phase 2 — Awareness: Reach the Right Audience</div>
+            <div class="funnel-desc">TOF Awareness campaign to build brand familiarity and feed the pixel</div>
+          </div>
+        </div>
+        <div class="funnel-metric">
+          <div class="funnel-metric-num accent">231K</div>
+          <div class="funnel-metric-label">Reach Achieved</div>
+        </div>
+      </div>
+      <div class="funnel-arrow">↓</div>
+      <div class="funnel-stage f3">
+        <div class="funnel-left">
+          <div class="funnel-icon">💬</div>
+          <div>
+            <div class="funnel-title">Phase 3 — Conversion: WhatsApp Messaging Campaigns</div>
+            <div class="funnel-desc">TOF Traffic & Engagement campaigns driving direct WhatsApp conversations</div>
+          </div>
+        </div>
+        <div class="funnel-metric">
+          <div class="funnel-metric-num green">130+</div>
+          <div class="funnel-metric-label">WhatsApp Leads</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHASE 1 -->
+  <div class="section-block reveal">
+    <div class="step-label">Phase 01 — Foundation</div>
+    <h2>Build the pages. Post consistently. Train the algorithm.</h2>
+    <p>
+      Before a single ad was launched, we spent weeks establishing the client's social media
+      presence. This wasn't optional — it was <strong>critical infrastructure</strong>.
+    </p>
+
+    <div class="phases">
+      <div class="phase-card">
+        <div class="phase-header">
+          <span class="phase-num">Pages Created</span>
+          <div class="phase-name">Facebook & Instagram Setup</div>
+        </div>
+        <p class="phase-desc">
+          We created and fully optimised both the Facebook Page and Instagram account —
+          profile photos, cover images, bio, contact details, and call-to-action buttons
+          all configured for a real estate business.
+        </p>
+      </div>
+      <div class="phase-card">
+        <div class="phase-header">
+          <span class="phase-num">Consistent Posting</span>
+          <div class="phase-name">Content Calendar Execution</div>
+        </div>
+        <p class="phase-desc">
+          We ran a consistent posting schedule with property showcases, project highlights,
+          location benefits, testimonial posts, and educational content about home buying.
+          The goal was not viral reach — it was to give Meta's algorithm something to
+          learn from. <strong>Every post was a data point.</strong> Who liked it. Who saved it.
+          Who clicked through. Meta stores all of this.
+        </p>
+        <div class="phase-bullets">
+          <div class="phase-bullet">Property showcase posts with pricing and location highlights</div>
+          <div class="phase-bullet">Home-buying tips and local real estate market content</div>
+          <div class="phase-bullet">Consistent posting cadence — not sporadic, never dropped</div>
+          <div class="phase-bullet">Engagement prompts to build organic interaction signals</div>
+        </div>
+      </div>
+      <div class="phase-card">
+        <div class="phase-header">
+          <span class="phase-num">Why This Mattered</span>
+          <div class="phase-name">Audience Signals for Meta's Algorithm</div>
+        </div>
+        <p class="phase-desc">
+          Meta Ads works on audience signals. When you run ads to a page with zero history,
+          the algorithm spends days (and rupees) in a "learning phase" — testing broadly
+          just to figure out who might be interested. <strong>By building organic engagement first,
+          we gave Meta a head start.</strong> It already knew who engaged with real estate content
+          on our page. When we turned on ads, the learning phase was dramatically shorter
+          and more efficient.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHASE 2 -->
+  <div class="section-block reveal">
+    <div class="step-label">Phase 02 — Awareness</div>
+    <h2>TOF Awareness Campaign — Reaching 231,430 people at ₹2.81 CPM</h2>
+    <p>
+      With the social pages active and content history established, we launched the
+      <strong>Top-of-Funnel (TOF) Awareness Campaign</strong> — the first paid campaign in the strategy.
+    </p>
+    <p>
+      The objective was not leads yet. The objective was <strong>brand reach and pixel warming</strong>.
+      We needed to get the brand in front of the right audience — people in the target geography
+      who matched the profile of a real estate buyer — and let Meta's pixel track who clicked,
+      who visited the website, and who spent time on key pages.
+    </p>
+
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-icon">👥</div>
+        <div class="metric-num accent">231,430</div>
+        <div class="metric-name">Reach</div>
+        <div class="metric-desc">Unique people reached through the awareness campaign</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">📊</div>
+        <div class="metric-num blue">293,276</div>
+        <div class="metric-name">Impressions</div>
+        <div class="metric-desc">Total ad views delivered across placements</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">💰</div>
+        <div class="metric-num orange">₹2.81</div>
+        <div class="metric-name">Cost per 1,000 Reach</div>
+        <div class="metric-desc">Highly efficient CPM for a brand-building campaign</div>
+      </div>
+    </div>
+
+    <p>
+      At ₹2.81 per 1,000 people reached, this awareness phase was extremely cost-efficient.
+      More importantly, it built a <strong>warm custom audience</strong> — people who had now seen the brand
+      at least once. When the conversion campaigns launched next, they were targeting people
+      who were already familiar with the client, not cold strangers.
+    </p>
+  </div>
+
+  <!-- PHASE 3 -->
+  <div class="section-block reveal">
+    <div class="step-label">Phase 03 — Conversion</div>
+    <h2>Traffic & Engagement Campaigns — Driving WhatsApp Conversations</h2>
+    <p>
+      With awareness built and the pixel populated, we launched the conversion phase:
+      <strong>TOF Traffic and Engagement campaigns</strong> optimised for WhatsApp messaging conversations.
+      Rather than a generic "Contact Us" form, WhatsApp was the chosen conversion point —
+      because in the Indian real estate market, <strong>buyers prefer conversational,
+      low-friction enquiries</strong> over formal lead forms.
+    </p>
+
+    <div class="phases">
+      <div class="phase-card">
+        <div class="phase-header">
+          <span class="phase-num">TOF TRAFF · 3BHK</span>
+          <div class="phase-name">Traffic Campaign — 3BHK Properties</div>
+        </div>
+        <p class="phase-desc">
+          Targeted potential buyers specifically interested in 3BHK configurations.
+          Achieved <strong>83 WhatsApp conversations</strong> at an average cost of
+          <strong>₹80.04 per conversation</strong> — strong performance for a high-ticket
+          real estate category.
+        </p>
+        <div class="phase-bullets">
+          <div class="phase-bullet">Spend: ₹6,643 · Reach: 92,945 · Impressions: 129,509</div>
+          <div class="phase-bullet">Audience: warm retargeting pool from awareness phase</div>
+          <div class="phase-bullet">Placement: Facebook & Instagram feeds + Stories</div>
+        </div>
+      </div>
+      <div class="phase-card">
+        <div class="phase-header">
+          <span class="phase-num">TOF ENG · WA · 2BHK</span>
+          <div class="phase-name">Engagement Campaign — 2BHK Properties</div>
+        </div>
+        <p class="phase-desc">
+          A separate engagement-objective campaign targeting 2BHK buyers generated
+          <strong>48 WhatsApp conversations</strong> at <strong>₹88.20 per conversation</strong>,
+          reaching 96,851 people with 131,279 impressions.
+        </p>
+        <div class="phase-bullets">
+          <div class="phase-bullet">Spend: ₹4,233 · Reach: 96,851 · Impressions: 131,279</div>
+          <div class="phase-bullet">Separately targeted from 3BHK — no audience overlap</div>
+          <div class="phase-bullet">Messaging conversations tracked as primary conversion event</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quote-block">
+      <p>"WhatsApp as a conversion event consistently outperforms web forms in Indian real estate. The friction is lower, the conversation is immediate, and buyers feel more comfortable asking questions informally before committing to a site visit."</p>
+    </div>
+  </div>
+
+  <!-- META ADS SCREENSHOT -->
+  <div class="section-block reveal">
+    <div class="ss-wrap">
+      <div class="ss-label">Live Campaign Dashboard — Proof of Results</div>
+      <p style="margin-bottom:1.25rem">This is the actual Meta Ads Manager dashboard showing all 6 campaigns run for the real estate client during March 2026 — including spend, reach, impressions, and conversation results.</p>
+      <div class="ss-card">
+        <img src="meta-ads-screenshot.png" alt="Meta Ads Manager dashboard showing 6 real estate campaigns with results — ₹11,997 total spend, 575,413 impressions, 420,556 reach, WhatsApp conversations and Lead Form results"/>
+        <div class="ss-caption">
+          <strong>Meta Ads Manager · Campaign View · 1 Mar – 31 Mar 2026</strong>
+          — 6 campaigns · ₹11,997.07 total spend · 575,413 impressions · 420,556 reach
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FULL CAMPAIGN BREAKDOWN -->
+  <div class="section-block reveal">
+    <div class="step-label">Campaign Breakdown</div>
+    <h2>All 6 Campaigns — What Each One Did</h2>
+
+    <div class="campaign-table-wrap">
+      <div class="ct-header">
+        <span>Campaign</span>
+        <span>Type</span>
+        <span>Results</span>
+        <span>Spend</span>
+        <span>Reach</span>
+      </div>
+
+      <div class="ct-row">
+        <div class="ct-name">TOF — Leads · 3BHK
+          <small>30 Mar 2026 · Lead Form objective</small>
+        </div>
+        <div class="ct-val"><span class="ct-badge badge-lead">Lead Form</span></div>
+        <div class="ct-val">Learning phase</div>
+        <div class="ct-val">₹471</div>
+        <div class="ct-val">18,054</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-name">TOF — ENG · WA · 2BHK
+          <small>28 Feb 2026 · WhatsApp Engagement</small>
+        </div>
+        <div class="ct-val"><span class="ct-badge badge-engagement">Engagement</span></div>
+        <div class="ct-val" style="color:var(--green);font-weight:600">48 conversations</div>
+        <div class="ct-val">₹4,233</div>
+        <div class="ct-val">96,851</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-name">TOF — AWAR · 25 Feb 2026
+          <small>Brand Awareness · Reach objective</small>
+        </div>
+        <div class="ct-val"><span class="ct-badge badge-awareness">Awareness</span></div>
+        <div class="ct-val" style="color:var(--accent);font-weight:600">231,430 reach</div>
+        <div class="ct-val">₹649</div>
+        <div class="ct-val">231,430</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-name">TOF — TRAFF · WA · 3BHK
+          <small>21 Feb 2026 · WhatsApp Traffic</small>
+        </div>
+        <div class="ct-val"><span class="ct-badge badge-traffic">Traffic</span></div>
+        <div class="ct-val" style="color:var(--green);font-weight:600">83 conversations</div>
+        <div class="ct-val">₹6,643</div>
+        <div class="ct-val">92,945</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-name">TOF — ENG · WA · 18 Feb 2026
+          <small>Engagement warm-up · ₹0 spend</small>
+        </div>
+        <div class="ct-val"><span class="ct-badge badge-engagement">Engagement</span></div>
+        <div class="ct-val">Paused</div>
+        <div class="ct-val">₹0</div>
+        <div class="ct-val">—</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-name">TOF — Engagement · WA · 17 Feb 2026
+          <small>Initial engagement test</small>
+        </div>
+        <div class="ct-val"><span class="ct-badge badge-engagement">Engagement</span></div>
+        <div class="ct-val">Paused</div>
+        <div class="ct-val">₹0</div>
+        <div class="ct-val">—</div>
+      </div>
+
+      <div class="ct-total-row">
+        <span>Totals — 6 campaigns</span>
+        <span>—</span>
+        <span style="color:var(--green)">131 conversations</span>
+        <span style="color:var(--orange)">₹11,997</span>
+        <span style="color:var(--accent)">420,556</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- KEY RESULTS -->
+  <div class="section-block reveal">
+    <div class="step-label">Results Summary</div>
+    <h2>What we achieved across the full campaign period</h2>
+
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-icon">💬</div>
+        <div class="metric-num green">131</div>
+        <div class="metric-name">WhatsApp Conversations</div>
+        <div class="metric-desc">Direct lead conversations from motivated property enquirers</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">👁️</div>
+        <div class="metric-num accent">575K+</div>
+        <div class="metric-name">Total Impressions</div>
+        <div class="metric-desc">Brand visibility delivered across Meta platforms</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">👥</div>
+        <div class="metric-num blue">420,556</div>
+        <div class="metric-name">Total Reach</div>
+        <div class="metric-desc">Unique individuals reached across all campaigns</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">💰</div>
+        <div class="metric-num orange">₹80–88</div>
+        <div class="metric-name">Cost Per Conversation</div>
+        <div class="metric-desc">Average across WhatsApp conversion campaigns</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">📍</div>
+        <div class="metric-num accent">₹2.81</div>
+        <div class="metric-name">CPM — Awareness Phase</div>
+        <div class="metric-desc">Highly efficient reach cost during brand-building phase</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">🏗️</div>
+        <div class="metric-num blue">0→Active</div>
+        <div class="metric-name">Social Presence Built</div>
+        <div class="metric-desc">From zero pages to active, engaged Facebook & Instagram profiles</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LESSONS -->
+  <div class="section-block reveal">
+    <div class="step-label">Key Takeaways</div>
+    <h2>What this project taught me</h2>
+    <p>This wasn't just a paid ads project. It was a full funnel build — from zero to a converting lead generation machine. The structured approach made all the difference.</p>
+
+    <div class="lessons-grid">
+      <div class="lesson-card">
+        <div class="lesson-num">01</div>
+        <div class="lesson-title">Never skip the foundation</div>
+        <div class="lesson-desc">Running ads to a page with no history is like opening a shop with no signage. Building the social presence first gave the algorithm the signals it needed to perform.</div>
+      </div>
+      <div class="lesson-card">
+        <div class="lesson-num">02</div>
+        <div class="lesson-title">Organic content is audience research</div>
+        <div class="lesson-desc">Every organic post told Meta who our real audience was. That data became the targeting engine for every paid campaign that followed.</div>
+      </div>
+      <div class="lesson-card">
+        <div class="lesson-num">03</div>
+        <div class="lesson-title">Awareness before conversion, always</div>
+        <div class="lesson-desc">Cold audiences don't convert. The ₹649 awareness spend that reached 231K people was what made the ₹11K conversion spend so efficient.</div>
+      </div>
+      <div class="lesson-card">
+        <div class="lesson-num">04</div>
+        <div class="lesson-title">WhatsApp beats web forms in India</div>
+        <div class="lesson-desc">For real estate in India, WhatsApp is the highest-converting touchpoint. People message before they visit. The strategy was built around this buyer behaviour.</div>
+      </div>
+      <div class="lesson-card">
+        <div class="lesson-num">05</div>
+        <div class="lesson-title">Segment by product, not just audience</div>
+        <div class="lesson-desc">Running 2BHK and 3BHK as separate campaigns ensured creative and messaging matched buyer intent precisely — and prevented audience dilution.</div>
+      </div>
+      <div class="lesson-card">
+        <div class="lesson-num">06</div>
+        <div class="lesson-title">The full funnel compounds over time</div>
+        <div class="lesson-desc">Each phase built on the last. The awareness campaign fed the conversion campaign. The organic posts fed the awareness campaign. Structure creates compounding returns.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AUTHOR CTA -->
+  <div class="author-cta reveal">
+    <div class="author-info">
+      <h3>Sanjay Kumar V · Digital Marketer</h3>
+      <p>SEO · Ecommerce Marketing · Performance Marketing · Meta Ads · AEO · GEO · Coimbatore</p>
+    </div>
+    <a href="mailto:hello@sanjaykumarv.com" class="cta-btn">Work with me →</a>
+  </div>
+
+</div>
+
+<script>
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')})},{threshold:0.07});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
