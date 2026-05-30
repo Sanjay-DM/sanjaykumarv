@@ -219,13 +219,17 @@ footer{padding:2rem 3rem;border-top:1px solid var(--border);display:flex;align-i
 @media(max-width:900px){
   nav{padding:0 1.5rem}
   .nav-links{display:none}
-  .hero-inner{grid-template-columns:1fr}
-  .hero-photo{display:none}
+  .hero-inner{grid-template-columns:1fr;gap:2rem}
+  .hero-photo{display:flex;width:100%;max-width:320px;margin:0 auto;aspect-ratio:3/4}
+  .photo-tag{display:none}
   .section{padding:4rem 1.5rem}
   .hero{padding:120px 1.5rem 60px}
-  .svc-row,.achievements-grid,.cs-grid{grid-template-columns:1fr}
+  .achievements-grid{grid-template-columns:1fr}
+  .svc-row{grid-template-columns:1fr;gap:1.25rem}
+  .svc-img{display:flex;width:100%;aspect-ratio:16/9}
+  .cs-grid{grid-template-columns:1fr}
   .cs-card.featured{grid-column:span 1;grid-template-columns:1fr}
-  .svc-img{display:none}
+  .cs-card.featured .cs-thumb{border-right:none;border-bottom:1px solid var(--border)}
   .process-grid,.blog-grid{grid-template-columns:1fr}
   .exp-item{grid-template-columns:1fr;gap:0.25rem}
   .exp-company,.exp-period{text-align:left}
