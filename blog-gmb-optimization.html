@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>How to Improve Your Google My Business Listing | Sanjay Kumar V</title>
+<meta name="description" content="Learn how to optimise your Google My Business listing using Proximity signals, CTR improvements, and professional review responses to dominate local search."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Bricolage+Grotesque:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#ffffff;--bg2:#f5f3ff;--bg3:#ede9fe;--card:#faf9ff;
+  --border:rgba(109,40,217,0.12);--border2:rgba(109,40,217,0.25);
+  --text:#0f0a1e;--muted:#5b5470;--muted2:#9990b0;--accent:#7c3aed;
+  --accent-light:#ede9fe;--accent-mid:#a78bfa;
+  --green:#059669;--green-bg:rgba(5,150,105,0.06);--green-border:rgba(5,150,105,0.2);
+  --red:#dc2626;--red-bg:rgba(220,38,38,0.05);--red-border:rgba(220,38,38,0.18);
+  --font-head:'Bricolage Grotesque',sans-serif;--font-body:'Inter',sans-serif;
+  --radius:14px;--radius-sm:8px;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:15px;line-height:1.75;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--bg2)}
+::-webkit-scrollbar-thumb{background:var(--accent-mid);border-radius:4px}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 3rem;height:64px;background:rgba(255,255,255,0.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:var(--font-head);font-size:0.95rem;font-weight:700;display:flex;align-items:center;gap:0.5rem;color:var(--muted)}
+.nav-logo strong{color:var(--text)}
+.nav-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+.nav-back{display:flex;align-items:center;gap:0.5rem;font-size:0.82rem;color:var(--muted);border:1px solid var(--border2);border-radius:40px;padding:0.45rem 1rem;transition:all 0.2s}
+.nav-back:hover{color:var(--text);border-color:var(--text)}
+
+/* HERO */
+.hero{padding:110px 3rem 0;max-width:860px;margin:0 auto}
+.breadcrumb{display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;color:var(--muted2);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:1.75rem}
+.breadcrumb span{color:var(--muted)}
+.blog-tag{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(124,58,237,0.08);border:1px solid rgba(124,58,237,0.2);color:var(--accent);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.35rem 0.9rem;border-radius:40px;margin-bottom:1.5rem}
+.hero h1{font-family:var(--font-head);font-size:clamp(2rem,4.5vw,3.2rem);font-weight:800;line-height:1.1;letter-spacing:-0.02em;margin-bottom:1.5rem}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero-meta{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;color:var(--muted);font-size:0.82rem;margin-bottom:2.5rem}
+.meta-item{display:flex;align-items:center;gap:0.4rem}
+.meta-dot{width:4px;height:4px;border-radius:50%;background:var(--muted2)}
+
+/* HERO IMAGE */
+.hero-img-wrap{width:100%;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);margin-bottom:3rem;aspect-ratio:16/7;background:var(--bg3);display:flex;align-items:center;justify-content:center;position:relative}
+.hero-img-wrap img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-img-pattern{position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,transparent,transparent 14px,rgba(124,58,237,0.03) 14px,rgba(124,58,237,0.03) 15px)}
+
+/* TOC */
+.toc-box{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:1.75rem 2rem;margin-bottom:3.5rem}
+.toc-label{font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;display:flex;align-items:center;gap:0.6rem}
+.toc-label::before{content:'';width:16px;height:1px;background:var(--accent)}
+.toc-list{list-style:none;display:flex;flex-direction:column;gap:0.5rem}
+.toc-list li a{font-size:0.87rem;color:var(--muted);display:flex;align-items:center;gap:0.6rem;transition:color 0.2s}
+.toc-list li a::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--accent-mid);flex-shrink:0}
+.toc-list li a:hover{color:var(--accent)}
+
+/* BODY */
+.body-content{max-width:860px;margin:0 auto;padding:0 3rem 6rem}
+.section-block{margin-bottom:4rem}
+.step-label{display:flex;align-items:center;gap:0.75rem;font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem}
+.step-label::before{content:'';width:20px;height:1px;background:var(--accent)}
+h2{font-family:var(--font-head);font-size:1.7rem;font-weight:700;letter-spacing:-0.02em;line-height:1.2;margin-bottom:1rem;color:var(--text)}
+h3{font-family:var(--font-head);font-size:1.05rem;font-weight:600;color:var(--text);margin-bottom:0.6rem;margin-top:2rem}
+p{color:var(--muted);font-size:0.93rem;line-height:1.9;margin-bottom:1rem}
+p strong{color:var(--text);font-weight:500}
+
+/* SECTION DIVIDER */
+.section-num{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:var(--accent);color:#fff;font-family:var(--font-head);font-size:0.95rem;font-weight:700;flex-shrink:0}
+.section-heading-row{display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem}
+.section-heading-row h2{margin-bottom:0}
+
+/* INFO CARD */
+.info-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:1.5rem 1.75rem;margin:1.5rem 0}
+.info-card-title{font-family:var(--font-head);font-size:0.88rem;font-weight:600;color:var(--text);margin-bottom:0.9rem;display:flex;align-items:center;gap:0.5rem}
+.info-item{display:flex;align-items:flex-start;gap:0.75rem;margin-bottom:0.65rem;font-size:0.88rem;color:var(--muted);line-height:1.7}
+.info-item-icon{font-size:0.8rem;flex-shrink:0;margin-top:0.2rem}
+.info-item strong{color:var(--text);font-weight:500}
+
+/* REVIEW BOXES */
+.review-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin:2rem 0}
+.review-box{border-radius:var(--radius);padding:2rem}
+.review-box.positive{background:var(--green-bg);border:1px solid var(--green-border)}
+.review-box.negative{background:var(--red-bg);border:1px solid var(--red-border)}
+.review-box-title{font-family:var(--font-head);font-size:1rem;font-weight:700;margin-bottom:1.25rem;display:flex;align-items:center;gap:0.5rem}
+.review-box.positive .review-box-title{color:var(--green)}
+.review-box.negative .review-box-title{color:var(--red)}
+.review-step{display:flex;align-items:flex-start;gap:0.75rem;margin-bottom:0.9rem;font-size:0.87rem;color:var(--muted);line-height:1.7}
+.review-step-dot{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.65rem;font-weight:700;color:#fff;flex-shrink:0;margin-top:0.1rem}
+.review-box.positive .review-step-dot{background:var(--green)}
+.review-box.negative .review-step-dot{background:var(--red)}
+.review-step strong{color:var(--text)}
+
+/* EXAMPLE QUOTE */
+.example-quote{background:var(--bg2);border-left:3px solid var(--accent);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:1rem 1.5rem;margin:0.75rem 0 0.75rem 1.75rem;font-size:0.85rem;font-style:italic;color:var(--text)}
+
+/* WHY IT WORKS */
+.why-box{background:rgba(124,58,237,0.04);border:1px solid rgba(124,58,237,0.14);border-radius:var(--radius);padding:1.75rem;margin:1.75rem 0}
+.why-box-title{font-family:var(--font-head);font-size:0.88rem;font-weight:600;color:var(--accent);margin-bottom:1rem;letter-spacing:0.04em;text-transform:uppercase;font-size:0.72rem}
+.why-item{display:flex;align-items:flex-start;gap:0.75rem;margin-bottom:0.55rem;font-size:0.87rem;color:var(--muted)}
+.why-item::before{content:'✓';color:var(--accent);font-weight:700;flex-shrink:0}
+
+/* DONT BOX */
+.dont-box{background:rgba(220,38,38,0.04);border:1px solid rgba(220,38,38,0.15);border-radius:var(--radius);padding:1.75rem;margin:2rem 0}
+.dont-box-title{font-family:var(--font-head);font-size:0.72rem;font-weight:600;color:var(--red);margin-bottom:1rem;letter-spacing:0.04em;text-transform:uppercase}
+.dont-item{display:flex;align-items:flex-start;gap:0.75rem;margin-bottom:0.55rem;font-size:0.87rem;color:var(--muted)}
+.dont-item::before{content:'✕';color:var(--red);font-weight:700;flex-shrink:0;font-size:0.8rem}
+
+/* CONCLUSION */
+.conclusion-box{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:2.5rem;margin:2rem 0}
+.conclusion-box h3{margin-top:0;font-family:var(--font-head);font-size:1.1rem;margin-bottom:1rem}
+.conclusion-item{display:flex;align-items:flex-start;gap:0.9rem;margin-bottom:0.75rem;font-size:0.9rem;color:var(--muted)}
+.conclusion-num{font-family:var(--font-head);font-size:0.7rem;color:#fff;background:var(--accent);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:0.1rem;font-weight:700}
+
+/* AUTHOR CTA */
+.author-cta{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:2.5rem;margin-top:4rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.author-info h3{font-family:var(--font-head);font-size:1.05rem;font-weight:700;margin-bottom:0.4rem}
+.author-info p{font-size:0.83rem;color:var(--muted);margin:0}
+.cta-btn{background:var(--accent);color:#fff;font-weight:600;font-size:0.85rem;padding:0.75rem 1.75rem;border-radius:40px;white-space:nowrap;transition:opacity 0.2s,box-shadow 0.2s;box-shadow:0 4px 20px rgba(124,58,237,0.25)}
+.cta-btn:hover{opacity:0.85}
+
+/* RELATED */
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:1.5rem}
+.related-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:1.5rem;transition:border-color 0.2s,transform 0.2s}
+.related-card:hover{border-color:var(--border2);transform:translateY(-3px)}
+.related-tag{font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:0.6rem}
+.related-title{font-family:var(--font-head);font-size:0.9rem;font-weight:600;color:var(--text);line-height:1.4;margin-bottom:0.75rem}
+.related-link{font-size:0.78rem;color:var(--muted);transition:color 0.2s}
+.related-link:hover{color:var(--accent)}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity 0.65s ease,transform 0.65s ease}
+.reveal.show{opacity:1;transform:none}
+
+/* PROGRESS BAR */
+.reading-bar{position:fixed;top:64px;left:0;height:2px;background:var(--accent);width:0%;z-index:199;transition:width 0.1s linear}
+
+@media(max-width:800px){
+  nav{padding:0 1.5rem}
+  .hero,.body-content{padding-left:1.5rem;padding-right:1.5rem}
+  .review-grid{grid-template-columns:1fr}
+  .related-grid{grid-template-columns:1fr}
+  .author-cta{flex-direction:column}
+  h2{font-size:1.4rem}
+}
+</style>
+</head>
+<body>
+
+<div class="reading-bar" id="readingBar"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <div class="nav-dot"></div>
+    <span>Sanjay Kumar V · <strong>Blog</strong></span>
+  </div>
+  <a href="index.html" class="nav-back">← Back to Portfolio</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="breadcrumb">
+    <span>Sanjay Kumar V</span>
+    <span>›</span>
+    <span>Blog</span>
+    <span>›</span>
+    Local SEO
+  </div>
+  <div class="blog-tag">✦ Local SEO · Google My Business · 2025</div>
+  <h1>How to Improve Your <em>Google My Business</em> Listing and Handle Reviews the Right Way</h1>
+  <div class="hero-meta">
+    <div class="meta-item">📅 2025</div>
+    <div class="meta-dot"></div>
+    <div class="meta-item">⏱ 6 min read</div>
+    <div class="meta-dot"></div>
+    <div class="meta-item">✍ Sanjay Kumar V</div>
+    <div class="meta-dot"></div>
+    <div class="meta-item">📍 Local SEO · GMB · Reviews</div>
+  </div>
+
+  <!-- HERO IMAGE -->
+  <div class="hero-img-wrap">
+    <div class="hero-img-pattern"></div>
+    <img src="1781025449513_image.png" alt="Google My Business and Google Business Profile"/>
+  </div>
+</div>
+
+<!-- BODY -->
+<div class="body-content">
+
+  <!-- INTRO -->
+  <div class="section-block reveal">
+    <p>For a local business, the importance of online visibility is extremely high. Among the most effective ways of boosting your local presence is through <strong>Google My Business (GMB)</strong>. If you have optimised your GMB listing, you can increase your local search rankings considerably.</p>
+    <p>In this blog, let's discuss the most important factors affecting the performance of GMB listings — <strong>Proximity</strong>, <strong>CTR</strong>, and how you should professionally respond to <strong>Google Reviews</strong>.</p>
+
+    <!-- TOC -->
+    <div class="toc-box">
+      <div class="toc-label">In this article</div>
+      <ul class="toc-list">
+        <li><a href="#proximity">1. Proximity — Making Google Trust Your Location</a></li>
+        <li><a href="#ctr">2. CTR — Getting People to Actually Click</a></li>
+        <li><a href="#reviews">3. How to Respond to Google Reviews</a></li>
+        <li><a href="#donts">4. What Not To Do</a></li>
+        <li><a href="#conclusion">5. Conclusion</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PROXIMITY -->
+  <div class="section-block reveal" id="proximity">
+    <div class="step-label">Factor 01</div>
+    <div class="section-heading-row">
+      <div class="section-num">1</div>
+      <h2>Proximity</h2>
+    </div>
+    <p>Proximity is one of the most crucial factors in Google's local ranking algorithm. Google needs to believe that your business <strong>actually operates in the location you've mentioned</strong>. The details you provide — address, map pin, business images, and local references — all help Google verify the authenticity of your listing.</p>
+
+    <div class="info-card">
+      <div class="info-card-title">📌 Three things to get right</div>
+      <div class="info-item">
+        <span class="info-item-icon">🔩</span>
+        <div><strong>Fix your service area</strong> — Service area settings on GMB can sometimes be incorrect. Fixing this helps Google understand exactly where you operate, improving local visibility.</div>
+      </div>
+      <div class="info-item">
+        <span class="info-item-icon">📍</span>
+        <div><strong>Pin accuracy</strong> — The pin on the map should be placed exactly at your business location. An off-pin confuses Google's algorithm.</div>
+      </div>
+      <div class="info-item">
+        <span class="info-item-icon">🏢</span>
+        <div><strong>Suite & local markers</strong> — If you're in a building, include the suite number. Mention nearby landmarks to help Google and users locate you precisely.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTR -->
+  <div class="section-block reveal" id="ctr">
+    <div class="step-label">Factor 02</div>
+    <div class="section-heading-row">
+      <div class="section-num">2</div>
+      <h2>CTR — Click Through Rate</h2>
+    </div>
+    <p>CTR plays a significant role in the success of your GMB listing. It's a direct signal Google uses to judge how relevant and useful your listing is to searchers.</p>
+    <p>If people see your listing but <strong>don't click</strong>, Google interprets it as low relevance and your ranking drops. When people <strong>do click</strong>, Google sees it as a trust signal and pushes your listing higher.</p>
+
+    <div class="info-card">
+      <div class="info-card-title">⚡ What to optimise for maximum CTR</div>
+      <div class="info-item">
+        <span class="info-item-icon">🏷</span>
+        <div><strong>Business title</strong> — Clear, relevant, and keyword-aligned.</div>
+      </div>
+      <div class="info-item">
+        <span class="info-item-icon">📂</span>
+        <div><strong>Business category</strong> — Choose the most accurate primary and secondary categories available.</div>
+      </div>
+      <div class="info-item">
+        <span class="info-item-icon">📝</span>
+        <div><strong>Description</strong> — Write for humans first, include your key services and location naturally.</div>
+      </div>
+      <div class="info-item">
+        <span class="info-item-icon">📷</span>
+        <div><strong>Real photos over generic ones</strong> — Upload actual images of your storefront, team, and services in action. Real photos build trust and dramatically increase click rates.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- REVIEWS -->
+  <div class="section-block reveal" id="reviews">
+    <div class="step-label">Factor 03</div>
+    <div class="section-heading-row">
+      <div class="section-num">3</div>
+      <h2>How to Respond to Google Reviews</h2>
+    </div>
+    <p>Responding to Google Reviews is vital for building trust, increasing engagement, and enhancing your local reputation. Both positive and negative reviews need a thoughtful, timely response.</p>
+
+    <div class="review-grid">
+      <!-- POSITIVE -->
+      <div class="review-box positive">
+        <div class="review-box-title">😊 For Positive Reviews</div>
+        <div class="review-step">
+          <div class="review-step-dot">1</div>
+          <div><strong>Thank the reviewer by name</strong><br>Always start by acknowledging them personally.</div>
+        </div>
+        <div class="example-quote">"Thank you, Rajesh, for your wonderful feedback!"</div>
+        <div class="review-step">
+          <div class="review-step-dot">2</div>
+          <div><strong>Reference something specific</strong><br>Mention a detail from their review to show you read it.</div>
+        </div>
+        <div class="example-quote">"We're glad you appreciated our quick service."</div>
+        <div class="review-step">
+          <div class="review-step-dot">3</div>
+          <div><strong>Invite them back</strong><br>Encourage their return and softly introduce another service.</div>
+        </div>
+        <div class="example-quote">"We look forward to serving you again soon!"</div>
+      </div>
+
+      <!-- NEGATIVE -->
+      <div class="review-box negative">
+        <div class="review-box-title">😟 For Negative Reviews</div>
+        <div class="review-step">
+          <div class="review-step-dot">1</div>
+          <div><strong>Apologise for their experience</strong><br>Acknowledge the issue first, without excuses.</div>
+        </div>
+        <div class="example-quote">"We're sorry to hear about your experience."</div>
+        <div class="review-step">
+          <div class="review-step-dot">2</div>
+          <div><strong>Stay calm and empathetic</strong><br>Keep your tone respectful regardless of the complaint.</div>
+        </div>
+        <div class="review-step">
+          <div class="review-step-dot">3</div>
+          <div><strong>Take the conversation offline</strong><br>Share direct contact details and involve the owner or manager.</div>
+        </div>
+        <div class="example-quote">"Please contact our manager directly so we can resolve this."</div>
+      </div>
+    </div>
+
+    <!-- WHY IT WORKS -->
+    <div class="why-box">
+      <div class="why-box-title">Why this approach works</div>
+      <div class="why-item">Personalised responses prove the reply isn't automated, building genuine trust</div>
+      <div class="why-item">Naturally adds location and service keywords to your GMB profile</div>
+      <div class="why-item">Softly promotes other services you offer without sounding salesy</div>
+      <div class="why-item">Gives unhappy customers a clear resolution path, preventing public arguments</div>
+      <div class="why-item">Future customers see that you genuinely care — this converts browsers into buyers</div>
+    </div>
+  </div>
+
+  <!-- DONTS -->
+  <div class="section-block reveal" id="donts">
+    <div class="step-label">Common Mistakes</div>
+    <h2>What Not To Do</h2>
+    <p>Avoid these mistakes when managing your GMB reviews — each one quietly damages your local reputation over time.</p>
+
+    <div class="dont-box">
+      <div class="dont-box-title">❌ Review response mistakes to avoid</div>
+      <div class="dont-item">Copy and paste the same response to every review — every reviewer deserves something unique</div>
+      <div class="dont-item">Sound robotic with generic lines like <em>"Thanks for the review"</em> — it makes your business feel impersonal</div>
+      <div class="dont-item">Argue or get defensive in public — never fight with customers online</div>
+      <div class="dont-item">Ignore negative reviews — not responding is worse than a bad response</div>
+      <div class="dont-item">Respond weeks after the review was posted — timely engagement is everything</div>
+    </div>
+  </div>
+
+  <!-- CONCLUSION -->
+  <div class="section-block reveal" id="conclusion">
+    <div class="step-label">Wrapping Up</div>
+    <h2>Conclusion</h2>
+    <p>Optimising your Google My Business listing is one of the highest-leverage actions a local business can take. Done right, it builds long-term trust, improves discoverability, and turns online visibility into real customers walking through your door.</p>
+
+    <div class="conclusion-box">
+      <h3>The three areas to focus on 🎯</h3>
+      <div class="conclusion-item">
+        <div class="conclusion-num">1</div>
+        <div><strong>Strengthen Proximity signals</strong> — accurate pin, correct service area, suite details, and local markers.</div>
+      </div>
+      <div class="conclusion-item">
+        <div class="conclusion-num">2</div>
+        <div><strong>Improve CTR through listing optimisation</strong> — compelling title, right category, real photos, and a strong description.</div>
+      </div>
+      <div class="conclusion-item">
+        <div class="conclusion-num">3</div>
+        <div><strong>Respond to reviews professionally</strong> — personalised, timely, and empathetic for both positive and negative feedback.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RELATED BLOGS -->
+  <div class="section-block reveal">
+    <div class="step-label">More from the Blog</div>
+    <h2>Related Articles</h2>
+    <div class="related-grid">
+      <div class="related-card">
+        <div class="related-tag">SEO</div>
+        <div class="related-title">What is AEO? How to Rank in AI Search Engines Like ChatGPT & Perplexity</div>
+        <a href="#" class="related-link">Read more →</a>
+      </div>
+      <div class="related-card">
+        <div class="related-tag">Ecommerce</div>
+        <div class="related-title">Amazon vs Flipkart: Which Marketplace Should You Prioritise in 2025?</div>
+        <a href="#" class="related-link">Read more →</a>
+      </div>
+      <div class="related-card">
+        <div class="related-tag">Local SEO</div>
+        <div class="related-title">Local SEO in 2025: How to Rank Your Business on Google Maps & Page 1</div>
+        <a href="#" class="related-link">Read more →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- AUTHOR CTA -->
+  <div class="author-cta reveal">
+    <div class="author-info">
+      <h3>Sanjay Kumar V · Digital Marketer</h3>
+      <p>SEO · Local SEO · Ecommerce Marketing · Performance Marketing · AEO · GEO · Coimbatore</p>
+    </div>
+    <a href="mailto:hello@sanjaykumarv.com" class="cta-btn">Work with me →</a>
+  </div>
+
+</div>
+
+<script>
+// Scroll reveal
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show') })
+}, { threshold: 0.07 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// Reading progress bar
+window.addEventListener('scroll', () => {
+  const doc = document.documentElement;
+  const scrolled = doc.scrollTop;
+  const total = doc.scrollHeight - doc.clientHeight;
+  document.getElementById('readingBar').style.width = (scrolled / total * 100) + '%';
+}, { passive: true });
+</script>
+</body>
+</html>

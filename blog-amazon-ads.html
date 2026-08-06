@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Types of Amazon Ads and How They Actually Work | Sanjay Kumar V</title>
+<meta name="description" content="A no-fluff breakdown of Sponsored Products, Sponsored Brands, and Display ads — which one to use and when, based on real experience running Amazon campaigns."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Bricolage+Grotesque:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#ffffff;--bg2:#f5f3ff;--bg3:#ede9fe;--card:#faf9ff;
+  --border:rgba(109,40,217,0.12);--border2:rgba(109,40,217,0.25);
+  --text:#0f0a1e;--muted:#5b5470;--muted2:#9990b0;--accent:#7c3aed;
+  --accent-light:#ede9fe;--accent-mid:#a78bfa;
+  --orange:#d97706;--orange-bg:rgba(217,119,6,0.06);--orange-border:rgba(217,119,6,0.2);
+  --blue:#2563eb;--blue-bg:rgba(37,99,235,0.06);--blue-border:rgba(37,99,235,0.18);
+  --green:#059669;--green-bg:rgba(5,150,105,0.06);--green-border:rgba(5,150,105,0.2);
+  --font-head:'Bricolage Grotesque',sans-serif;--font-body:'Inter',sans-serif;
+  --radius:14px;--radius-sm:8px;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:15px;line-height:1.75;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--bg2)}
+::-webkit-scrollbar-thumb{background:var(--accent-mid);border-radius:4px}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 3rem;height:64px;background:rgba(255,255,255,0.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:var(--font-head);font-size:0.95rem;font-weight:700;display:flex;align-items:center;gap:0.5rem;color:var(--muted)}
+.nav-logo strong{color:var(--text)}
+.nav-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+.nav-back{display:flex;align-items:center;gap:0.5rem;font-size:0.82rem;color:var(--muted);border:1px solid var(--border2);border-radius:40px;padding:0.45rem 1rem;transition:all 0.2s}
+.nav-back:hover{color:var(--text);border-color:var(--text)}
+
+/* READING BAR */
+.reading-bar{position:fixed;top:64px;left:0;height:2px;background:var(--accent);width:0%;z-index:199;transition:width 0.1s linear}
+
+/* HERO */
+.hero{padding:110px 3rem 0;max-width:860px;margin:0 auto}
+.breadcrumb{display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;color:var(--muted2);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:1.75rem}
+.breadcrumb span{color:var(--muted)}
+.blog-tag{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(124,58,237,0.08);border:1px solid rgba(124,58,237,0.2);color:var(--accent);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.35rem 0.9rem;border-radius:40px;margin-bottom:1.5rem}
+.hero h1{font-family:var(--font-head);font-size:clamp(2rem,4.5vw,3.2rem);font-weight:800;line-height:1.1;letter-spacing:-0.02em;margin-bottom:1.5rem}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero-meta{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;color:var(--muted);font-size:0.82rem;margin-bottom:2.5rem}
+.meta-item{display:flex;align-items:center;gap:0.4rem}
+.meta-dot{width:4px;height:4px;border-radius:50%;background:var(--muted2)}
+
+/* HERO VISUAL — Amazon-themed illustrated banner */
+.hero-banner{width:100%;border-radius:var(--radius);border:1px solid var(--border);margin-bottom:3rem;background:linear-gradient(135deg,#0f0a1e 0%,#1a0a3e 60%,#2d0a5e 100%);padding:3rem 2.5rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;position:relative;overflow:hidden}
+.hero-banner::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 80% 50%,rgba(167,139,250,0.08) 0%,transparent 60%),radial-gradient(circle at 20% 80%,rgba(124,58,237,0.06) 0%,transparent 50%)}
+.banner-left{position:relative;z-index:1}
+.banner-eyebrow{font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent-mid);margin-bottom:0.75rem}
+.banner-title{font-family:var(--font-head);font-size:1.6rem;font-weight:800;color:#fff;line-height:1.2;margin-bottom:0.75rem}
+.banner-sub{font-size:0.82rem;color:rgba(255,255,255,0.45)}
+.banner-right{display:flex;gap:1rem;flex-shrink:0;position:relative;z-index:1;flex-wrap:wrap}
+.ad-pill{padding:0.55rem 1.1rem;border-radius:40px;font-size:0.75rem;font-weight:600;letter-spacing:0.03em;white-space:nowrap}
+.ad-pill.sp{background:rgba(5,150,105,0.15);border:1px solid rgba(5,150,105,0.35);color:#34d399}
+.ad-pill.sb{background:rgba(37,99,235,0.15);border:1px solid rgba(37,99,235,0.35);color:#93c5fd}
+.ad-pill.dv{background:rgba(217,119,6,0.15);border:1px solid rgba(217,119,6,0.35);color:#fcd34d}
+
+/* TOC */
+.toc-box{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:1.75rem 2rem;margin-bottom:3.5rem}
+.toc-label{font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;display:flex;align-items:center;gap:0.6rem}
+.toc-label::before{content:'';width:16px;height:1px;background:var(--accent)}
+.toc-list{list-style:none;display:flex;flex-direction:column;gap:0.5rem}
+.toc-list li a{font-size:0.87rem;color:var(--muted);display:flex;align-items:center;gap:0.6rem;transition:color 0.2s}
+.toc-list li a::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--accent-mid);flex-shrink:0}
+.toc-list li a:hover{color:var(--accent)}
+
+/* BODY */
+.body-content{max-width:860px;margin:0 auto;padding:0 3rem 6rem}
+.section-block{margin-bottom:4rem}
+.step-label{display:flex;align-items:center;gap:0.75rem;font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem}
+.step-label::before{content:'';width:20px;height:1px;background:var(--accent)}
+h2{font-family:var(--font-head);font-size:1.7rem;font-weight:700;letter-spacing:-0.02em;line-height:1.2;margin-bottom:1rem;color:var(--text)}
+p{color:var(--muted);font-size:0.93rem;line-height:1.9;margin-bottom:1rem}
+p strong{color:var(--text);font-weight:500}
+.section-heading-row{display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem}
+.section-heading-row h2{margin-bottom:0}
+
+/* AD TYPE BADGE */
+.ad-badge{display:inline-flex;align-items:center;gap:0.4rem;font-size:0.7rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:0.3rem 0.8rem;border-radius:40px;margin-bottom:1.25rem}
+.ad-badge.green{background:var(--green-bg);border:1px solid var(--green-border);color:var(--green)}
+.ad-badge.blue{background:var(--blue-bg);border:1px solid var(--blue-border);color:var(--blue)}
+.ad-badge.orange{background:var(--orange-bg);border:1px solid var(--orange-border);color:var(--orange)}
+
+/* AD CARD */
+.ad-card{border-radius:var(--radius);padding:2rem 2.25rem;margin:1.5rem 0 2rem}
+.ad-card.green{background:var(--green-bg);border:1px solid var(--green-border)}
+.ad-card.blue{background:var(--blue-bg);border:1px solid var(--blue-border)}
+.ad-card.orange{background:var(--orange-bg);border:1px solid var(--orange-border)}
+.ad-card-title{font-family:var(--font-head);font-size:0.88rem;font-weight:700;margin-bottom:1rem}
+.ad-card.green .ad-card-title{color:var(--green)}
+.ad-card.blue .ad-card-title{color:var(--blue)}
+.ad-card.orange .ad-card-title{color:var(--orange)}
+.ad-card-row{display:flex;align-items:flex-start;gap:0.75rem;margin-bottom:0.6rem;font-size:0.87rem;color:var(--muted);line-height:1.7}
+.ad-card-row strong{color:var(--text);font-weight:500}
+.check{color:var(--green);font-size:0.8rem;flex-shrink:0;margin-top:0.2rem}
+.check.blue{color:var(--blue)}
+.check.orange{color:var(--orange)}
+
+/* INSIDER NOTE */
+.insider{background:rgba(124,58,237,0.04);border:1px solid rgba(124,58,237,0.15);border-radius:var(--radius-sm);padding:1.25rem 1.5rem;margin:1.5rem 0;display:flex;gap:1rem;align-items:flex-start}
+.insider-icon{font-size:1.1rem;flex-shrink:0;margin-top:0.1rem}
+.insider-text{font-size:0.87rem;color:var(--muted);line-height:1.8}
+.insider-text strong{color:var(--accent);font-weight:500}
+
+/* STAGE TABLE */
+.stage-table{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:2rem 0}
+.stage-row{display:grid;grid-template-columns:1fr 2fr;border-bottom:1px solid var(--border)}
+.stage-row:last-child{border-bottom:none}
+.stage-row.header{background:var(--bg2)}
+.stage-cell{padding:1rem 1.25rem;font-size:0.87rem}
+.stage-row.header .stage-cell{font-family:var(--font-head);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted2);font-weight:600}
+.stage-label{color:var(--text);font-weight:500;font-family:var(--font-head);font-size:0.88rem}
+.stage-desc{color:var(--muted)}
+.stage-tag{display:inline-block;font-size:0.68rem;font-weight:600;padding:0.2rem 0.6rem;border-radius:20px;margin-top:0.4rem}
+.stage-tag.sp{background:var(--green-bg);color:var(--green);border:1px solid var(--green-border)}
+.stage-tag.sb{background:var(--blue-bg);color:var(--blue);border:1px solid var(--blue-border)}
+.stage-tag.dv{background:var(--orange-bg);color:var(--orange);border:1px solid var(--orange-border)}
+
+/* KEY TAKEAWAY */
+.takeaway{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:2.5rem;margin:2rem 0}
+.takeaway-title{font-family:var(--font-head);font-size:1rem;font-weight:700;margin-bottom:1.25rem;color:var(--text)}
+.takeaway-item{display:flex;gap:0.9rem;margin-bottom:0.75rem;font-size:0.9rem;color:var(--muted)}
+.takeaway-num{font-family:var(--font-head);font-size:0.7rem;color:#fff;background:var(--accent);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:0.1rem;font-weight:700}
+
+/* RELATED */
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:1.5rem}
+.related-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:1.5rem;transition:border-color 0.2s,transform 0.2s}
+.related-card:hover{border-color:var(--border2);transform:translateY(-3px)}
+.related-tag{font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:0.6rem}
+.related-title{font-family:var(--font-head);font-size:0.9rem;font-weight:600;color:var(--text);line-height:1.4;margin-bottom:0.75rem}
+.related-link{font-size:0.78rem;color:var(--muted);transition:color 0.2s}
+.related-link:hover{color:var(--accent)}
+
+/* AUTHOR CTA */
+.author-cta{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:2.5rem;margin-top:4rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.author-info h3{font-family:var(--font-head);font-size:1.05rem;font-weight:700;margin-bottom:0.4rem}
+.author-info p{font-size:0.83rem;color:var(--muted);margin:0}
+.cta-btn{background:var(--accent);color:#fff;font-weight:600;font-size:0.85rem;padding:0.75rem 1.75rem;border-radius:40px;white-space:nowrap;transition:opacity 0.2s,box-shadow 0.2s;box-shadow:0 4px 20px rgba(124,58,237,0.25)}
+.cta-btn:hover{opacity:0.85}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity 0.65s ease,transform 0.65s ease}
+.reveal.show{opacity:1;transform:none}
+
+@media(max-width:800px){
+  nav{padding:0 1.5rem}
+  .hero,.body-content{padding-left:1.5rem;padding-right:1.5rem}
+  .hero-banner{flex-direction:column;padding:2rem 1.5rem}
+  .banner-right{justify-content:flex-start}
+  .related-grid{grid-template-columns:1fr}
+  .stage-row{grid-template-columns:1fr}
+  .author-cta{flex-direction:column}
+  h2{font-size:1.4rem}
+}
+</style>
+</head>
+<body>
+
+<div class="reading-bar" id="readingBar"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <div class="nav-dot"></div>
+    <span>Sanjay Kumar V · <strong>Blog</strong></span>
+  </div>
+  <a href="index.html" class="nav-back">← Back to Portfolio</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="breadcrumb">
+    <span>Sanjay Kumar V</span>
+    <span>›</span>
+    <span>Blog</span>
+    <span>›</span>
+    Amazon Ads
+  </div>
+  <div class="blog-tag">✦ Ecommerce · Amazon Ads · 2025</div>
+  <h1>Types of Amazon Ads and <em>How They Actually Work</em></h1>
+  <div class="hero-meta">
+    <div class="meta-item">📅 2025</div>
+    <div class="meta-dot"></div>
+    <div class="meta-item">⏱ 7 min read</div>
+    <div class="meta-dot"></div>
+    <div class="meta-item">✍ Sanjay Kumar V</div>
+    <div class="meta-dot"></div>
+    <div class="meta-item">📍 Amazon · PPC · Ecommerce</div>
+  </div>
+
+  <!-- HERO BANNER -->
+  <div class="hero-banner">
+    <div class="banner-left">
+      <div class="banner-eyebrow">Amazon Advertising Breakdown</div>
+      <div class="banner-title">3 Campaign Types.<br>One Right Choice<br>for Your Stage.</div>
+      <div class="banner-sub">Sponsored Products · Sponsored Brands · Display & Video</div>
+    </div>
+    <div class="banner-right">
+      <div class="ad-pill sp">✦ Sponsored Products</div>
+      <div class="ad-pill sb">✦ Sponsored Brands</div>
+      <div class="ad-pill dv">✦ Display / Video</div>
+    </div>
+  </div>
+</div>
+
+<!-- BODY -->
+<div class="body-content">
+
+  <!-- INTRO -->
+  <div class="section-block reveal">
+    <p>When you first log into Amazon Ads and see the campaign creation screen, it looks simple enough. Three options. How complicated can it be?</p>
+    <p>Pretty complicated, actually. Running the wrong ad type for what you're trying to do costs money and burns time before you figure out which one to use and when. Here's a breakdown that cuts through the noise.</p>
+
+    <div class="toc-box">
+      <div class="toc-label">In this article</div>
+      <ul class="toc-list">
+        <li><a href="#sponsored-products">1. Sponsored Products — Start Here. Always.</a></li>
+        <li><a href="#sponsored-brands">2. Sponsored Brands — Once You Have Something to Show</a></li>
+        <li><a href="#display">3. Display, Video & Audio — The Advanced Stuff</a></li>
+        <li><a href="#which-one">4. So Which One Should You Use?</a></li>
+        <li><a href="#last-word">5. One Last Thing</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SPONSORED PRODUCTS -->
+  <div class="section-block reveal" id="sponsored-products">
+    <div class="step-label">Ad Type 01</div>
+    <div class="section-heading-row">
+      <h2>Sponsored Products</h2>
+    </div>
+    <div class="ad-badge green">✦ Best for Beginners · Highest ROI · Start Here</div>
+
+    <p>This is the one Amazon highlights first on their own campaign selection screen — and there's a good reason for that. Sponsored Products are the ads that show up <strong>directly inside search results</strong>. They look almost exactly like organic listings — same image, same title, same price, same star rating — with only a tiny "Sponsored" label.</p>
+    <p>Buyers don't really notice that label. They just see a relevant product and click.</p>
+
+    <div class="ad-card green">
+      <div class="ad-card-title">⚡ How it works</div>
+      <div class="ad-card-row"><span class="check">→</span><div>You pick a product and choose keywords — or let Amazon pick them automatically via Auto campaigns</div></div>
+      <div class="ad-card-row"><span class="check">→</span><div>You set a bid. When someone searches, your product competes in a <strong>real-time auction</strong> for a top spot</div></div>
+      <div class="ad-card-row"><span class="check">→</span><div><strong>You only pay when someone clicks</strong> — cost-per-click model</div></div>
+      <div class="ad-card-row"><span class="check">→</span><div>You can see exactly which search terms triggered your ad, which converted, and which wasted money</div></div>
+    </div>
+
+    <div class="insider">
+      <div class="insider-icon">💡</div>
+      <div class="insider-text">The feedback loop with Sponsored Products is <strong>tight and clean</strong>. It's one product at a time, so the data is reliable. Run auto campaigns first to discover keywords, then switch to manual campaigns once you know what converts. Don't touch Sponsored Brands or Display until you've done at least 3–6 months of Sponsored Products first.</div>
+    </div>
+  </div>
+
+  <!-- SPONSORED BRANDS -->
+  <div class="section-block reveal" id="sponsored-brands">
+    <div class="step-label">Ad Type 02</div>
+    <div class="section-heading-row">
+      <h2>Sponsored Brands</h2>
+    </div>
+    <div class="ad-badge blue">✦ For Brand Discovery · Multiple Products · Established Sellers</div>
+
+    <p>Sponsored Brands are the <strong>banner-style ads at the very top of Amazon search results</strong> — the large ones with your logo, a custom headline, and two or three products displayed side by side. More visible, more brand-forward, and more expensive.</p>
+    <p>Amazon describes them as "driving brand discovery," which is accurate. These ads are less about pushing a single product and more about putting your brand name in front of people who haven't heard of you yet.</p>
+
+    <div class="ad-card blue">
+      <div class="ad-card-title">🔷 When Sponsored Brands actually work</div>
+      <div class="ad-card-row"><span class="check blue">→</span><div>You have <strong>multiple solid products</strong> with strong review counts</div></div>
+      <div class="ad-card-row"><span class="check blue">→</span><div>You have a recognisable logo and a real brand story to tell</div></div>
+      <div class="ad-card-row"><span class="check blue">→</span><div>You want to <strong>own the top of search</strong> for your product category</div></div>
+      <div class="ad-card-row"><span class="check blue">→</span><div>You've already validated conversions through Sponsored Products first</div></div>
+    </div>
+
+    <div class="insider">
+      <div class="insider-icon">⚠️</div>
+      <div class="insider-text">The most common mistake: sellers set up Sponsored Brands before they're ready. Running Sponsored Brands with two products, a generic logo, and no real brand story means you'll get clicks but very few conversions. <strong>Build your catalog and reviews first. Then come back to this.</strong></div>
+    </div>
+  </div>
+
+  <!-- DISPLAY VIDEO AUDIO -->
+  <div class="section-block reveal" id="display">
+    <div class="step-label">Ad Type 03</div>
+    <div class="section-heading-row">
+      <h2>Display, Video & Audio</h2>
+    </div>
+    <div class="ad-badge orange">✦ Advanced · High Budget · Awareness & Retargeting</div>
+
+    <p>This one is fundamentally different from the other two. Sponsored Products and Sponsored Brands show your ads to people who are <strong>actively searching on Amazon</strong>. They already have intent.</p>
+    <p>Display ads reach people <strong>everywhere else</strong> — other websites, apps, streaming services, and back on Amazon as they browse. You're targeting based on past behaviour and interests, not what someone is actively searching for right now.</p>
+
+    <div class="ad-card orange">
+      <div class="ad-card-title">🎬 What's inside this category</div>
+      <div class="ad-card-row"><span class="check orange">→</span><div><strong>Display ads</strong> — Follow users across the internet based on their Amazon browsing behaviour</div></div>
+      <div class="ad-card-row"><span class="check orange">→</span><div><strong>Video ads</strong> — Play before or during Amazon streaming content (Prime Video, Twitch)</div></div>
+      <div class="ad-card-row"><span class="check orange">→</span><div><strong>Audio ads</strong> — Play on Alexa devices and Amazon Music — pure awareness tools</div></div>
+      <div class="ad-card-row"><span class="check orange">→</span><div><strong>Retargeting</strong> — Show ads specifically to people who viewed your product listing but didn't buy</div></div>
+    </div>
+
+    <div class="insider">
+      <div class="insider-icon">💡</div>
+      <div class="insider-text">ROI here is harder to measure — you're planting a seed, not catching someone mid-search. The sellers who use Display well are either <strong>large brands or sellers with very specific retargeting goals</strong>. For most sellers starting out, this can wait. The cost is highest and the results are the least direct.</div>
+    </div>
+  </div>
+
+  <!-- WHICH ONE -->
+  <div class="section-block reveal" id="which-one">
+    <div class="step-label">Decision Guide</div>
+    <h2>So Which One Should You Use?</h2>
+    <p>Here's how to think about it based on where your business actually is right now — not where you want to be.</p>
+
+    <div class="stage-table">
+      <div class="stage-row header">
+        <div class="stage-cell">Your Stage</div>
+        <div class="stage-cell">What to Run</div>
+      </div>
+      <div class="stage-row">
+        <div class="stage-cell"><div class="stage-label">Just launched</div><div class="stage-desc">Under 50 reviews</div></div>
+        <div class="stage-cell">
+          <div class="stage-desc">Sponsored Products only. Auto campaign first, then manual once you have keyword data. Keep it simple — don't add complexity before you understand your conversion rate.</div>
+          <div><span class="stage-tag sp">Sponsored Products</span></div>
+        </div>
+      </div>
+      <div class="stage-row">
+        <div class="stage-cell"><div class="stage-label">Established</div><div class="stage-desc">Growing catalog, 50–200+ reviews</div></div>
+        <div class="stage-cell">
+          <div class="stage-desc">Add Sponsored Brands to start building brand recognition. Keep your Sponsored Products campaigns running alongside — don't replace one with the other.</div>
+          <div><span class="stage-tag sp">Sponsored Products</span> <span class="stage-tag sb">Sponsored Brands</span></div>
+        </div>
+      </div>
+      <div class="stage-row">
+        <div class="stage-cell"><div class="stage-label">Strong brand</div><div class="stage-desc">Multiple products, larger budget</div></div>
+        <div class="stage-cell">
+          <div class="stage-desc">Now you can experiment with Display — especially retargeting people who visited your listings but didn't convert. This is where the advanced stuff starts to pay off.</div>
+          <div><span class="stage-tag sp">Sponsored Products</span> <span class="stage-tag sb">Sponsored Brands</span> <span class="stage-tag dv">Display</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="insider">
+      <div class="insider-icon">🎯</div>
+      <div class="insider-text">The mistake most sellers make is trying to run everything at once before they have the budget or the data to do it right. <strong>Amazon's ad platform rewards patience and optimisation — not spray-and-pray.</strong></div>
+    </div>
+  </div>
+
+  <!-- LAST WORD -->
+  <div class="section-block reveal" id="last-word">
+    <div class="step-label">The Bottom Line</div>
+    <h2>One Last Thing</h2>
+    <p>The campaign type is just the starting point. What actually determines whether your ads make money is what happens <em>after</em> you launch — how you read the data, which keywords you cut, how you adjust bids, and whether your listing converts the traffic you're buying.</p>
+
+    <div class="takeaway">
+      <div class="takeaway-title">The real sequence that works 🎯</div>
+      <div class="takeaway-item">
+        <div class="takeaway-num">1</div>
+        <div><strong>Get your listing right first</strong> — strong title, bullets, images, and A+ content before spending a rupee on ads</div>
+      </div>
+      <div class="takeaway-item">
+        <div class="takeaway-num">2</div>
+        <div><strong>Then run the ads</strong> — start with Sponsored Products auto campaigns to collect keyword data</div>
+      </div>
+      <div class="takeaway-item">
+        <div class="takeaway-num">3</div>
+        <div><strong>Then learn from the numbers</strong> — cut wasted spend, scale what converts, and only add complexity when you've earned it</div>
+      </div>
+    </div>
+
+    <p>A bad listing with a great campaign type still loses money. A great listing with even a basic Sponsored Products campaign can do very well. That's really the whole game.</p>
+  </div>
+
+  <!-- RELATED -->
+  <div class="section-block reveal">
+    <div class="step-label">More from the Blog</div>
+    <h2>Related Articles</h2>
+    <div class="related-grid">
+      <div class="related-card">
+        <div class="related-tag">Local SEO</div>
+        <div class="related-title">How to Improve Your Google My Business Listing and Handle Reviews</div>
+        <a href="blog-gmb-optimization.html" class="related-link">Read more →</a>
+      </div>
+      <div class="related-card">
+        <div class="related-tag">SEO</div>
+        <div class="related-title">What is AEO? How to Rank in AI Search Engines Like ChatGPT & Perplexity</div>
+        <a href="#" class="related-link">Read more →</a>
+      </div>
+      <div class="related-card">
+        <div class="related-tag">Ecommerce</div>
+        <div class="related-title">How to Write Amazon Listing Copy That Actually Converts</div>
+        <a href="#" class="related-link">Read more →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- AUTHOR CTA -->
+  <div class="author-cta reveal">
+    <div class="author-info">
+      <h3>Sanjay Kumar V · Digital Marketer</h3>
+      <p>SEO · Local SEO · Ecommerce Marketing · Performance Marketing · AEO · GEO · Coimbatore</p>
+    </div>
+    <a href="mailto:hello@sanjaykumarv.com" class="cta-btn">Work with me →</a>
+  </div>
+
+</div>
+
+<script>
+// Scroll reveal
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show') })
+}, { threshold: 0.07 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// Reading progress bar
+window.addEventListener('scroll', () => {
+  const doc = document.documentElement;
+  const scrolled = doc.scrollTop;
+  const total = doc.scrollHeight - doc.clientHeight;
+  document.getElementById('readingBar').style.width = (scrolled / total * 100) + '%';
+}, { passive: true });
+</script>
+</body>
+</html>
