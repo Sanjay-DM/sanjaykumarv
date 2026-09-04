@@ -1021,36 +1021,34 @@
     }
 
     /* FOOTER */
-    footer {
-      padding: 2rem 3rem;
-      border-top: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1rem;
-      background: #fff
-    }
-
-    .footer-copy {
-      font-size: 0.78rem;
-      color: var(--muted2)
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 1.5rem
-    }
-
-    .footer-links a {
-      font-size: 0.78rem;
-      color: var(--muted);
-      transition: color 0.2s
-    }
-
-    .footer-links a:hover {
-      color: var(--accent)
-    }
+    footer { background:#0f0a1e; padding:4rem 3rem 2rem; border-top:1px solid rgba(124,58,237,0.2); }
+    .footer-top { display:grid; grid-template-columns:1.4fr 1fr 1fr 1.6fr; gap:3rem; padding-bottom:3rem; border-bottom:1px solid rgba(255,255,255,0.08); }
+    .footer-brand-name { font-family:var(--font-head); font-size:1.8rem; font-weight:800; color:var(--accent); margin-bottom:1rem; letter-spacing:-0.02em; }
+    .footer-brand-desc { font-size:0.85rem; color:rgba(255,255,255,0.45); line-height:1.8; margin-bottom:1.5rem; max-width:240px; }
+    .footer-social-icons { display:flex; gap:0.6rem; }
+    .footer-social-icon { width:36px; height:36px; border-radius:8px; border:1px solid rgba(255,255,255,0.12); display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.5); font-size:0.9rem; transition:all 0.2s; text-decoration:none; }
+    .footer-social-icon:hover { border-color:var(--accent); color:var(--accent); background:rgba(124,58,237,0.1); }
+    .footer-col-title { font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(255,255,255,0.3); margin-bottom:1.25rem; font-weight:600; }
+    .footer-nav-links { display:flex; flex-direction:column; gap:0.65rem; list-style:none; }
+    .footer-nav-links a { font-size:0.88rem; color:rgba(255,255,255,0.55); text-decoration:none; transition:color 0.2s; }
+    .footer-nav-links a:hover { color:var(--accent); }
+    .footer-contact-item { font-size:0.88rem; color:rgba(255,255,255,0.55); margin-bottom:0.65rem; text-decoration:none; display:block; transition:color 0.2s; }
+    .footer-contact-item:hover { color:var(--accent); }
+    .footer-form { display:flex; flex-direction:column; gap:0.6rem; }
+    .footer-input { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:0.65rem 0.9rem; font-size:0.82rem; color:#fff; font-family:var(--font-body); outline:none; transition:border-color 0.2s; width:100%; }
+    .footer-input::placeholder { color:rgba(255,255,255,0.3); }
+    .footer-input:focus { border-color:var(--accent); }
+    .footer-input-row { display:grid; grid-template-columns:auto 1fr; gap:0.4rem; }
+    .footer-phone-prefix { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:0.65rem 0.75rem; font-size:0.82rem; color:rgba(255,255,255,0.6); font-family:var(--font-body); white-space:nowrap; }
+    .footer-textarea { resize:none; height:72px; }
+    .footer-send-btn { background:var(--accent); color:#fff; border:none; border-radius:8px; padding:0.75rem 1rem; font-size:0.85rem; font-weight:600; font-family:var(--font-body); cursor:pointer; transition:opacity 0.2s,transform 0.2s; box-shadow:0 4px 16px rgba(124,58,237,0.3); }
+    .footer-send-btn:hover { opacity:0.88; transform:translateY(-1px); }
+    .footer-bottom { display:flex; justify-content:space-between; align-items:center; padding-top:1.75rem; flex-wrap:wrap; gap:0.75rem; }
+    .footer-copy { font-size:0.78rem; color:rgba(255,255,255,0.25); }
+    .footer-made { font-size:0.78rem; color:rgba(255,255,255,0.25); }
+    .footer-made span { color:#e25555; }
+    @media(max-width:900px){ .footer-top { grid-template-columns:1fr 1fr; gap:2rem; } }
+    @media(max-width:600px){ .footer-top { grid-template-columns:1fr; } footer { padding:3rem 1.5rem 1.5rem; } }
 
     /* CASE STUDIES */
     .cs-grid {
@@ -1070,7 +1068,9 @@
       flex-direction: column
     }
 
-    .cs-card:hover {
+    .cs-card:hover .cs-thumb img { opacity: 1; transform: scale(1.03); }
+.cs-thumb img { transition: opacity 0.4s, transform 0.4s; }
+.cs-card:hover {
       border-color: var(--accent-mid);
       transform: translateY(-5px);
       box-shadow: 0 16px 40px rgba(124, 58, 237, 0.1)
@@ -2116,10 +2116,9 @@
 
       <!-- Featured: SRS Ladies Hostel SEO -->
       <div class="cs-card featured">
-        <div class="cs-thumb">
-          <div class="cs-thumb-pattern"></div>
-          <div class="cs-thumb-icon">🔍</div>
-          <div class="cs-thumb-label">Local SEO · Technical SEO · AEO / GEO</div>
+        <div class="cs-thumb" style="padding:0;overflow:hidden">
+          <img src="srs-website.png" alt="SRS Ladies Hostel Website — ranked on Google Page 1" style="width:100%;height:100%;object-fit:cover;object-position:top;opacity:0.85;transition:opacity 0.3s"/>
+          <div class="cs-thumb-label" style="background:rgba(124,58,237,0.7);color:#fff;padding:0.3rem 0.75rem;border-radius:40px;backdrop-filter:blur(4px)">Local SEO · Technical SEO · AEO / GEO</div>
         </div>
         <div class="cs-body">
           <div class="cs-tag-row">
@@ -2159,10 +2158,9 @@
 
       <!-- Real Estate Meta Ads -->
       <div class="cs-card">
-        <div class="cs-thumb">
-          <div class="cs-thumb-pattern"></div>
-          <div class="cs-thumb-icon">📱</div>
-          <div class="cs-thumb-label">Meta Ads · Lead Generation</div>
+        <div class="cs-thumb" style="padding:0;overflow:hidden">
+          <img src="meta-ads-screenshot-2.png" alt="Meta Ads Manager — Real Estate Lead Generation Campaign" style="width:100%;height:100%;object-fit:cover;object-position:top;opacity:0.85;transition:opacity 0.3s"/>
+          <div class="cs-thumb-label" style="background:rgba(59,130,246,0.7);color:#fff;padding:0.3rem 0.75rem;border-radius:40px;backdrop-filter:blur(4px)">Meta Ads · Lead Generation</div>
         </div>
         <div class="cs-body">
           <div class="cs-tag-row">
@@ -2197,10 +2195,9 @@
 
       <!-- Real Estate Case Study 2 -->
       <div class="cs-card">
-        <div class="cs-thumb" style="min-height:160px">
-          <div class="cs-thumb-pattern"></div>
-          <div class="cs-thumb-icon">📱</div>
-          <div class="cs-thumb-label">Meta Ads · 7 Campaigns</div>
+        <div class="cs-thumb" style="min-height:160px;padding:0;overflow:hidden">
+          <img src="meta-ads-realestate2.png" alt="Meta Ads Manager — 7 Campaign Real Estate WhatsApp Lead Gen" style="width:100%;height:100%;object-fit:cover;object-position:top;opacity:0.85;transition:opacity 0.3s"/>
+          <div class="cs-thumb-label" style="background:rgba(5,150,105,0.7);color:#fff;padding:0.3rem 0.75rem;border-radius:40px;backdrop-filter:blur(4px)">Meta Ads · 7 Campaigns</div>
         </div>
 
         <div class="cs-body">
@@ -2245,10 +2242,9 @@
 
       <!--Ecommerce Growth -->
       <div class="cs-card">
-        <div class="cs-thumb" style="min-height:160px">
-          <div class="cs-thumb-pattern"></div>
-          <div class="cs-thumb-icon">🛒</div>
-          <div class="cs-thumb-label">Ecommerce · Meta Ads</div>
+        <div class="cs-thumb" style="min-height:160px;padding:0;overflow:hidden">
+          <img src="naksha.png" alt="Ecommerce Meta Ads Campaign — 5x ROAS" style="width:100%;height:100%;object-fit:cover;object-position:top;opacity:0.85;transition:opacity 0.3s"/>
+          <div class="cs-thumb-label" style="background:rgba(217,119,6,0.7);color:#fff;padding:0.3rem 0.75rem;border-radius:40px;backdrop-filter:blur(4px)">Ecommerce · Meta Ads</div>
         </div>
         <div class="cs-body">
           <div class="cs-tag-row">
@@ -2460,8 +2456,8 @@
 
     <div class="blog-grid reveal">
       <div class="blog-card">
-        <div class="blog-img" style="padding:0">
-          <img src="seo.png" alt="SEO Blog" style="width:100%;height:100%;object-fit:cover;opacity:0.9"/>
+        <div class="blog-img" style="padding:0;overflow:hidden">
+          <img src="seo.png" alt="SEO Blog" style="width:100%;height:100%;object-fit:cover;opacity:0.9;transition:opacity 0.3s,transform 0.3s"/>
         </div>
         <div class="blog-body">
           <div class="blog-date">2026</div>
@@ -2470,8 +2466,8 @@
         </div>
       </div>
       <div class="blog-card">
-        <div class="blog-img" style="padding:0">
-          <img src="ecom.png" alt="Ecommerce Blog" style="width:100%;height:100%;object-fit:cover;opacity:0.9"/>
+        <div class="blog-img" style="padding:0;overflow:hidden">
+          <img src="ecom.png" alt="Ecommerce Blog" style="width:100%;height:100%;object-fit:cover;opacity:0.9;transition:opacity 0.3s,transform 0.3s"/>
         </div>
         <div class="blog-body">
           <div class="blog-date">2026</div>
@@ -2480,8 +2476,8 @@
         </div>
       </div>
       <div class="blog-card">
-        <div class="blog-img" style="padding:0">
-          <img src="smm.png" alt="Meta Ads Blog" style="width:100%;height:100%;object-fit:cover;opacity:0.9"/>
+        <div class="blog-img" style="padding:0;overflow:hidden">
+          <img src="smm.png" alt="Meta Ads Blog" style="width:100%;height:100%;object-fit:cover;opacity:0.9;transition:opacity 0.3s,transform 0.3s"/>
         </div>
         <div class="blog-body">
           <div class="blog-date">2026</div>
@@ -2512,14 +2508,63 @@
 
   <!-- FOOTER -->
   <footer>
-    <div class="footer-copy">Sanjay © 2026. SEO &amp; Ecommerce Growth Specialist · Coimbatore.</div>
-    <div class="footer-links">
-      <a href="https://www.linkedin.com/in/sanjay-kumar-502064326/" target="_blank">LinkedIn</a>
-      <a href="#" target="_blank">Instagram</a>
-      <a href="#" target="_blank">Twitter</a>
-      <a href="mailto:sanjayvrms68@gmail.com">Mail</a>
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">Sanjay.</div>
+        <p class="footer-brand-desc">SEO &amp; Ecommerce Growth Specialist from Coimbatore, delivering measurable growth across SEO, Meta Ads, AEO, GEO and Ecommerce.</p>
+        <div class="footer-social-icons">
+          <a href="mailto:sanjayvrms68@gmail.com" class="footer-social-icon" title="Email">✉</a>
+          <a href="https://wa.me/919876543210" class="footer-social-icon" target="_blank" title="WhatsApp">💬</a>
+          <a href="https://www.linkedin.com/in/sanjay-kumar-502064326/" class="footer-social-icon" target="_blank" title="LinkedIn" style="font-weight:700;font-size:0.75rem">in</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigation</div>
+        <ul class="footer-nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#achievements">About</a></li>
+          <li><a href="#case-studies">Case Studies</a></li>
+          <li><a href="#case-study">Services</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#cta">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact Info</div>
+        <a href="mailto:sanjayvrms68@gmail.com" class="footer-contact-item">sanjayvrms68@gmail.com</a>
+        <a href="https://wa.me/919876543210" class="footer-contact-item" target="_blank">WhatsApp Me</a>
+        <a href="https://www.linkedin.com/in/sanjay-kumar-502064326/" class="footer-contact-item" target="_blank">LinkedIn Profile</a>
+        <span class="footer-contact-item" style="cursor:default">Coimbatore, Tamil Nadu</span>
+      </div>
+      <div>
+        <div class="footer-col-title">Quick Message</div>
+        <form class="footer-form" onsubmit="handleFooterForm(event)">
+          <input type="text" class="footer-input" placeholder="Your name" required/>
+          <div class="footer-input-row">
+            <span class="footer-phone-prefix">IN +91</span>
+            <input type="tel" class="footer-input" placeholder="Mobile number"/>
+          </div>
+          <input type="email" class="footer-input" placeholder="Email address" required/>
+          <textarea class="footer-input footer-textarea" placeholder="Quick message..."></textarea>
+          <button type="submit" class="footer-send-btn">Send Message →</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Sanjay Kumar V. All rights reserved.</div>
+      <div class="footer-made">Made with <span>♥</span> in Coimbatore</div>
     </div>
   </footer>
+
+  <script>
+    function handleFooterForm(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('.footer-send-btn');
+      btn.textContent = 'Sent! ✓';
+      btn.style.background = '#059669';
+      setTimeout(() => { btn.textContent = 'Send Message →'; btn.style.background = ''; e.target.reset(); }, 3000);
+    }
+  </script>
 
   <script>
     function toggleFaq(btn) {
