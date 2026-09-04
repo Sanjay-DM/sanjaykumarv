@@ -1070,7 +1070,9 @@
       flex-direction: column
     }
 
-    .cs-card:hover {
+    .cs-card:hover .cs-thumb img { opacity: 1; transform: scale(1.03); }
+.cs-thumb img { transition: opacity 0.4s, transform 0.4s; }
+.cs-card:hover {
       border-color: var(--accent-mid);
       transform: translateY(-5px);
       box-shadow: 0 16px 40px rgba(124, 58, 237, 0.1)
@@ -2116,10 +2118,9 @@
 
       <!-- Featured: SRS Ladies Hostel SEO -->
       <div class="cs-card featured">
-        <div class="cs-thumb">
-          <div class="cs-thumb-pattern"></div>
-          <div class="cs-thumb-icon">🔍</div>
-          <div class="cs-thumb-label">Local SEO · Technical SEO · AEO / GEO</div>
+        <div class="cs-thumb" style="padding:0;overflow:hidden">
+          <img src="srs-website.png" alt="SRS Ladies Hostel Website — ranked on Google Page 1" style="width:100%;height:100%;object-fit:cover;object-position:top;opacity:0.85;transition:opacity 0.3s"/>
+          <div class="cs-thumb-label" style="background:rgba(124,58,237,0.7);color:#fff;padding:0.3rem 0.75rem;border-radius:40px;backdrop-filter:blur(4px)">Local SEO · Technical SEO · AEO / GEO</div>
         </div>
         <div class="cs-body">
           <div class="cs-tag-row">
@@ -2159,10 +2160,9 @@
 
       <!-- Real Estate Meta Ads -->
       <div class="cs-card">
-        <div class="cs-thumb">
-          <div class="cs-thumb-pattern"></div>
-          <div class="cs-thumb-icon">📱</div>
-          <div class="cs-thumb-label">Meta Ads · Lead Generation</div>
+        <div class="cs-thumb" style="padding:0;overflow:hidden">
+          <img src="meta-ads-screenshot.png" alt="Meta Ads Manager — Real Estate Lead Generation Campaign" style="width:100%;height:100%;object-fit:cover;object-position:top;opacity:0.85;transition:opacity 0.3s"/>
+          <div class="cs-thumb-label" style="background:rgba(59,130,246,0.7);color:#fff;padding:0.3rem 0.75rem;border-radius:40px;backdrop-filter:blur(4px)">Meta Ads · Lead Generation</div>
         </div>
         <div class="cs-body">
           <div class="cs-tag-row">
@@ -2197,10 +2197,9 @@
 
       <!-- Real Estate Case Study 2 -->
       <div class="cs-card">
-        <div class="cs-thumb" style="min-height:160px">
-          <div class="cs-thumb-pattern"></div>
-          <div class="cs-thumb-icon">📱</div>
-          <div class="cs-thumb-label">Meta Ads · 7 Campaigns</div>
+        <div class="cs-thumb" style="min-height:160px;padding:0;overflow:hidden">
+          <img src="meta-ads-realestate2.png" alt="Meta Ads Manager — 7 Campaign Real Estate WhatsApp Lead Gen" style="width:100%;height:100%;object-fit:cover;object-position:top;opacity:0.85;transition:opacity 0.3s"/>
+          <div class="cs-thumb-label" style="background:rgba(5,150,105,0.7);color:#fff;padding:0.3rem 0.75rem;border-radius:40px;backdrop-filter:blur(4px)">Meta Ads · 7 Campaigns</div>
         </div>
 
         <div class="cs-body">
@@ -2245,10 +2244,9 @@
 
       <!--Ecommerce Growth -->
       <div class="cs-card">
-        <div class="cs-thumb" style="min-height:160px">
-          <div class="cs-thumb-pattern"></div>
-          <div class="cs-thumb-icon">🛒</div>
-          <div class="cs-thumb-label">Ecommerce · Meta Ads</div>
+        <div class="cs-thumb" style="min-height:160px;padding:0;overflow:hidden">
+          <img src="ss1.png" alt="Ecommerce Meta Ads Campaign — 5x ROAS" style="width:100%;height:100%;object-fit:cover;object-position:top;opacity:0.85;transition:opacity 0.3s"/>
+          <div class="cs-thumb-label" style="background:rgba(217,119,6,0.7);color:#fff;padding:0.3rem 0.75rem;border-radius:40px;backdrop-filter:blur(4px)">Ecommerce · Meta Ads</div>
         </div>
         <div class="cs-body">
           <div class="cs-tag-row">
