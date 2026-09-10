@@ -843,6 +843,91 @@
       background: var(--muted2)
     }
 
+    .exp-item.exp-toggle {
+      display: block;
+      padding: 0;
+      cursor: pointer
+    }
+
+    .exp-item.exp-toggle:hover {
+      opacity: 1
+    }
+
+    .exp-head {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr auto;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.75rem 0;
+      transition: opacity 0.2s
+    }
+
+    .exp-item.exp-toggle:hover .exp-head {
+      opacity: 0.7
+    }
+
+    .exp-toggle-icon {
+      font-size: 1.4rem;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform 0.3s;
+      line-height: 1;
+      text-align: right
+    }
+
+    .exp-item.open .exp-toggle-icon {
+      transform: rotate(45deg);
+      color: var(--accent)
+    }
+
+    .exp-details {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.85;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease, padding 0.3s
+    }
+
+    .exp-details.open {
+      max-height: 1200px;
+      padding-bottom: 1.75rem
+    }
+
+    .exp-details h4 {
+      font-family: var(--font-head);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text);
+      margin: 1rem 0 0.4rem
+    }
+
+    .exp-details h4:first-child {
+      margin-top: 0
+    }
+
+    .exp-details ul {
+      margin: 0;
+      padding-left: 1.1rem
+    }
+
+    .exp-details li {
+      margin-bottom: 0.3rem
+    }
+
+    @media (max-width: 700px) {
+      .exp-head {
+        grid-template-columns: 1fr auto;
+        row-gap: 0.3rem
+      }
+
+      .exp-head .exp-company,
+      .exp-head .exp-period {
+        text-align: left;
+        grid-column: 1
+      }
+    }
+
     /* FAQ */
     .faq-list {
       margin-top: 3rem;
@@ -1907,6 +1992,7 @@
       <li><a href="#case-study">Services</a></li>
       <li><a href="#case-studies">Case Studies</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
       <li><a href="#blog">Blog</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul>
@@ -2400,20 +2486,118 @@
     <h2 class="section-title">Experience</h2>
 
     <div class="exp-list reveal">
+      <div class="exp-item exp-toggle">
+        <div class="exp-head" onclick="toggleExp(this)">
+          <div class="exp-role"><span class="exp-dot"></span>Digital Marketing Executive</div>
+          <div class="exp-company">Criar Solutions</div>
+          <div class="exp-period">Feb 2025 — Present</div>
+          <span class="exp-toggle-icon">+</span>
+        </div>
+        <div class="exp-details">
+          <h4>SEO</h4>
+          <ul>
+            <li>Executed full SEO workflow — Competitor Analysis, Keyword Research, On-Page, Off-Page, Technical SEO, AEO & GEO</li>
+            <li>Specialized in Local SEO, AEO & GEO optimization for business visibility</li>
+          </ul>
+          <h4>Meta Ads</h4>
+          <ul>
+            <li>Managed all ad types — Awareness, Engagement, Lead Generation & Sales Campaigns</li>
+            <li>Optimized audience targeting and creatives for maximum campaign efficiency</li>
+            <li>Handled ad campaigns across multiple industries including Real Estate, Electronics & E-Commerce</li>
+          </ul>
+          <h4>Social Media Marketing</h4>
+          <ul>
+            <li>Managed full SMM workflow — Content Calendar, Post Creation, Hashtag Research & Publishing</li>
+            <li>Handled social media presence for multiple clients simultaneously</li>
+          </ul>
+          <h4>Email Marketing</h4>
+          <ul>
+            <li>Built and launched Abandoned Cart Recovery email sequences</li>
+            <li>Designed email funnels to nurture leads and drive repeat purchases</li>
+          </ul>
+          <h4>E-Commerce</h4>
+          <ul>
+            <li>Set up and managed Amazon & Flipkart seller accounts — brand approvals & product listings</li>
+            <li>Ran Amazon Ads and Flipkart Ads campaigns to drive product visibility and sales</li>
+            <li>Basic editing and customized Shopify themes for client storefronts</li>
+          </ul>
+          <h4>Local & Search Presence</h4>
+          <ul>
+            <li>Created and optimized Google My Business (GMB) & Google Merchant Center (GMC) profiles</li>
+          </ul>
+          <h4>Strategy</h4>
+          <ul>
+            <li>Developed sales strategies contributing to client revenue growth</li>
+          </ul>
+          <h4>Industries Worked Across</h4>
+          <ul>
+            <li>Hospitality (Ladies Hostel)</li>
+            <li>Real Estate</li>
+            <li>Cosmetics & Beauty</li>
+            <li>Home & Kitchen Appliances</li>
+            <li>Electronics</li>
+            <li>Handicrafts & Religious Décor (Brass Idols & German Silver Products)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item exp-toggle">
+        <div class="exp-head" onclick="toggleExp(this)">
+          <div class="exp-role"><span class="exp-dot grey"></span>Social Media Marketing Executive</div>
+          <div class="exp-company">Swift Technologies</div>
+          <div class="exp-period">Nov 2024 — Jan 2025</div>
+          <span class="exp-toggle-icon">+</span>
+        </div>
+        <div class="exp-details">
+          <ul>
+            <li>Created and managed SMM content calendars for consistent brand presence</li>
+            <li>Designed creatives using Canva for social media publishing</li>
+            <li>Planned and executed Meta Ad campaigns for client growth</li>
+            <li>Managed Google My Business (GMB) profiles and optimization</li>
+            <li>Handled client communication and coordinated campaign feedback</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item exp-toggle">
+        <div class="exp-head" onclick="toggleExp(this)">
+          <div class="exp-role"><span class="exp-dot grey"></span>Digital Marketing Intern</div>
+          <div class="exp-company">HD Media Marketing</div>
+          <div class="exp-period">Sep 2024 — Nov 2024</div>
+          <span class="exp-toggle-icon">+</span>
+        </div>
+        <div class="exp-details">
+          <ul>
+            <li>Completed Advanced AI-based Digital Marketing Course</li>
+            <li>Handled SEO basics, SMM, and social media content calendar creation</li>
+            <li>Designed and published posts using Canva</li>
+            <li>Ran Meta Ads and executed basic Email Marketing campaigns</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section" id="education">
+    <div class="label">Background</div>
+    <h2 class="section-title">Education</h2>
+
+    <div class="exp-list reveal">
       <div class="exp-item">
-        <div class="exp-role"><span class="exp-dot"></span>Digital Marketer</div>
-        <div class="exp-company">Criar Solutions</div>
-        <div class="exp-period">Feb 2025 — Present</div>
+        <div class="exp-role"><span class="exp-dot"></span>B.Com with Information Technology</div>
+        <div class="exp-company">Kongunadu Arts & Science College, Coimbatore</div>
+        <div class="exp-period">2024</div>
       </div>
       <div class="exp-item">
-        <div class="exp-role"><span class="exp-dot grey"></span>Social Media Marketer</div>
-        <div class="exp-company">Swift Technologies</div>
-        <div class="exp-period">Nov 2024 — Jan 2025</div>
+        <div class="exp-role"><span class="exp-dot grey"></span>HSC — Commerce with Computer Application</div>
+        <div class="exp-company">VCV Government Higher Secondary School</div>
+        <div class="exp-period">2021</div>
       </div>
       <div class="exp-item">
-        <div class="exp-role"><span class="exp-dot grey"></span>Digital Marketing Intern</div>
+        <div class="exp-role"><span class="exp-dot grey"></span>AI-based Advanced Digital Marketing</div>
         <div class="exp-company">HD Media Marketing</div>
-        <div class="exp-period">Sep 2024 — Nov 2024</div>
+        <div class="exp-period">2024</div>
       </div>
     </div>
   </section>
@@ -2632,6 +2816,13 @@
       const isOpen = item.classList.contains('open');
       document.querySelectorAll('.faq-item').forEach(i => { i.classList.remove('open'); i.querySelector('.faq-a').classList.remove('open') });
       if (!isOpen) { item.classList.add('open'); ans.classList.add('open') }
+    }
+    function toggleExp(head) {
+      const item = head.parentElement;
+      const details = item.querySelector('.exp-details');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.exp-toggle').forEach(i => { i.classList.remove('open'); i.querySelector('.exp-details').classList.remove('open') });
+      if (!isOpen) { item.classList.add('open'); details.classList.add('open') }
     }
     const obs = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show') }) }, { threshold: 0.08 });
     document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
